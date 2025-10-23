@@ -5,9 +5,9 @@ import { CheckExpiredToken } from '@/utils/jwt'
 export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl
 
-    if (pathname.startsWith('/admin')) {
+      if (pathname.startsWith('/admin')) {
         const token = request.cookies.get('admin-token')?.value
-
+ 
        if (!token || (await CheckExpiredToken(token))) {
 
             const response = NextResponse.redirect(new URL('/auth', request.url))
