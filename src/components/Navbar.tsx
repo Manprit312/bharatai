@@ -75,7 +75,7 @@ function Navbar() {
                 <div className="max-w-7xl mx-auto flex items-center justify-center">
                     <div className="flex items-center space-x-3">
                         <Image
-                            src="/image/canada.png"
+                            src="/image/logo.png"
                             alt="Canada Flag"
                             width={24}
                             height={24}
@@ -94,7 +94,7 @@ function Navbar() {
                         >
                             <Phone className="w-4 h-4 text-black" />
                         </motion.div>
-                        <span className="text-sm font-semibold text-black">+1 (555) 123-4567</span>
+                        <span className="text-sm font-semibold text-black">+91 6202018140</span>
                     </div>
                 </div>
             </div>
@@ -118,10 +118,10 @@ function Navbar() {
                         >
                             <div className="relative">
                                 <Image
-                                    src="/icons/logo.jpg"
+                                    src="/image/logo.png"
                                     alt="KABULE TECH Logo"
-                                    width={40}
-                                    height={40}
+                                    width={60}
+                                    height={50}
                                     className="rounded-xl"
                                     priority
                                 />

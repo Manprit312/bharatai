@@ -30,10 +30,10 @@ function Footer() {
                     <div className="space-y-6">
                         <div className="flex items-center space-x-3">
                             <Image
-                                src="/icons/logo.jpg"
+                                src="/image/logo.png"
                                 alt="BharatAI Software Logo"
-                                width={40}
-                                height={40}
+                                width={70}
+                                height={50}
                                 className="rounded-lg"
                             />
                             <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ function Footer() {
                         {/* Social Media Icons */}
                         <div className="flex space-x-4">
                             <a
-                                href="https://facebook.com"
+                                href="https://www.facebook.com/aydpm.in/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
@@ -55,7 +55,7 @@ function Footer() {
                                 <Facebook size={20} />
                             </a>
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/aydpm.in/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-yellow-500 transition-all duration-300 text-white"
@@ -63,7 +63,7 @@ function Footer() {
                                 <Instagram size={20} />
                             </a>
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/in/ankit-yadav-aydpm/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-colors duration-300 text-white"
@@ -114,25 +114,24 @@ function Footer() {
                             <div className="flex items-start space-x-3">
                                 <MapPin size={20} className="text-yellow-500 mt-1 flex-shrink-0" />
                                 <div className="text-gray-300 text-sm">
-                                    <p>123 Toronto, Ottawa, Niagara Falls</p>
+                                    <p> Block 51, Bara Bazar Road , ORN, Karol Bagh , Delhi</p>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Phone size={20} className="text-blue-500 flex-shrink-0" />
                                 <a
-                                    href="tel:+15551234567"
+                                    href="tel:+91 6202018140"
                                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
                                 >
-                                    +15551234567
+                                   +91 6202018140
                                 </a>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail size={20} className="text-purple-500 flex-shrink-0" />
                                 <a
-                                    href="mailto:info@kabultechs.com"
+                                    href="mailto:founder@aydpm.in"
                                     className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm"
-                                >
-                                    info@kabultechs.com
+                                >founder@aydpm.in
                                 </a>
                             </div>
                         </div>
