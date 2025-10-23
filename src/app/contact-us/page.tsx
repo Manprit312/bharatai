@@ -38,7 +38,7 @@ function ContactPage() {
         {
             icon: Mail,
             title: "Email Us",
-            value: "hello@miladosoftware.com",
+            value: "founder@aydpm.in",
             description: "Send us an email anytime",
             color: "text-blue-600",
             bgColor: "bg-blue-500/20"

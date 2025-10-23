@@ -135,7 +135,7 @@ export default function RootLayout({
               "logo": "https://miladosoftware.com/image/logo.png",
               "image": "https://miladosoftware.com/image/logo.png",
               "telephone": "+1-555-123-4567",
-              "email": "hello@miladosoftware.com",
+              "email": "founder@aydpm.in",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "123 Tech Street",

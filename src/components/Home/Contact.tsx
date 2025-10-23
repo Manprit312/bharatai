@@ -56,21 +56,21 @@ function Contact() {
         {
             icon: Mail,
             title: "Email Us",
-            value: "hello@miladosoftware.com",
+            value: "founder@aydpm.in",
             description: "Send us an email anytime",
             color: "text-blue-600"
         },
         {
             icon: Phone,
             title: "Call Us",
-            value: "+1 (555) 123-4567",
+            value: "+91 6202018140",
             description: "Mon-Fri from 8am to 6pm",
             color: "text-purple-600"
         },
         {
             icon: MapPin,
             title: "Visit Us",
-            value: "123 Tech Street, Digital City",
+            value: " Block 51, Bara Bazar Road , ORN, Karol Bagh , Delhi",
             description: "Our office location",
             color: "text-cyan-500"
         }
