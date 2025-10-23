@@ -1,12 +1,13 @@
 // src/utils/jwt.ts
 import * as jose from "jose";
 
-const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) {
-  throw new Error("JWT_SECRET is not defined in environment variables");
-}
+const getSecret = () => {
+  const JWT_SECRET = process.env.JWT_SECRET;
+  if (!JWT_SECRET) throw new Error("JWT_SECRET not defined");
+  return new TextEncoder().encode(JWT_SECRET);
+};
 
-const secret = new TextEncoder().encode(JWT_SECRET);
+const secret = getSecret();
 
 export async function generateToken(payload: object, expiresIn = "1h") {
   const expSeconds = Math.floor(Date.now() / 1000) + parseDuration(expiresIn);
