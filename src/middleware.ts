@@ -2,13 +2,14 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { CheckExpiredToken } from '@/utils/jwt'
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl
 
     if (pathname.startsWith('/admin')) {
         const token = request.cookies.get('admin-token')?.value
 
-        if (!token || CheckExpiredToken(token)) {
+       if (!token || (await CheckExpiredToken(token))) {
+
             const response = NextResponse.redirect(new URL('/auth', request.url))
             if (token) response.cookies.delete('admin-token')
             return response
@@ -19,7 +20,8 @@ export function middleware(request: NextRequest) {
         const token = request.headers.get('authorization')?.replace('Bearer ', '') ||
             request.cookies.get('admin-token')?.value
 
-        if (!token || CheckExpiredToken(token)) {
+     if (!token || (await CheckExpiredToken(token))) {
+
             return NextResponse.json({ message: 'Unauthorized' }, { status: 401 })
         }
     }
