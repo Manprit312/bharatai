@@ -23,6 +23,7 @@
     "dotted-map": "^2.2.3",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
+    "jose": "^6.1.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.542.0",
     "mongoose": "^8.18.1",
