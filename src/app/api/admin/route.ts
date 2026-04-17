@@ -13,11 +13,9 @@ export async function POST(request: Request) {
         return NextResponse.json({ message: "Username and password are required" }, { status: 400 });
     }
 
-    console.log(USERNAMES, PASSWORD);
-
     if (username === USERNAMES && password === PASSWORD) {
-        const payload = { username, password };
-        const token = generateToken(payload, "2h");
+        const payload = { username };
+        const token = await generateToken(payload, "2h");
 
         return NextResponse.json({
             token,

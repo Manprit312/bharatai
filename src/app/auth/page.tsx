@@ -1,10 +1,8 @@
 "use client";
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useRouter } from 'next/navigation';
 
 function page() {
-    const router = useRouter();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState<string | null>(null);
@@ -19,10 +17,16 @@ function page() {
             const response = await axios.post('/api/admin', { username, password });
             const { token } = response.data;
 
-            localStorage.setItem('admin-token', token);
-            document.cookie = `admin-token=${token}; path=/; max-age=7200`; 
+            if (typeof token !== 'string' || !token.includes('.')) {
+                setError('Invalid login response. Please try again.');
+                return;
+            }
 
-            router.push('/admin');
+            localStorage.setItem('admin-token', token);
+            document.cookie = `admin-token=${encodeURIComponent(token)}; path=/; max-age=7200; SameSite=Lax`;
+
+            // Full navigation so middleware always receives the new cookie (client router alone can race).
+            window.location.assign('/admin');
         } catch (error: any) {
             setError(error.response?.data?.message || 'Login failed');
         } finally {

@@ -17,15 +17,13 @@ export async function generateToken(payload: object, expiresIn = "1h") {
     .sign(secret);
 }
 
+/** Returns true when the token must be rejected (missing, invalid, or expired). */
 export async function CheckExpiredToken(token: string) {
   try {
     await jose.jwtVerify(token, secret);
     return false;
-  } catch (error) {
-    if (error instanceof jose.errors.JWTExpired) {
-      return true;
-    }
-    return false;
+  } catch {
+    return true;
   }
 }
 
