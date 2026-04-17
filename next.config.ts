@@ -45,6 +45,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      { source: '/hire-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/hire-full-stack-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/freelance-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/freelance-full-stack-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/hire-react-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/hire-nextjs-developer', destination: '/hire-freelance-developer', permanent: true },
+      { source: '/hire-nodejs-developer', destination: '/hire-freelance-developer', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
