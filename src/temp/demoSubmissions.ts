@@ -54,8 +54,8 @@ export const demoSubmissions: ContactSubmission[] = [
     lastName: 'Rodriguez',
     email: 'emily.r@fintech.com',
     phone: '+1 (555) 321-0987',
-    projectType: 'Blockchain',
-    message: 'We want to create a DeFi platform with smart contracts and token staking functionality.',
+    projectType: 'Custom Software',
+    message: 'We want to build a fintech platform with secure transaction workflows and tokenized reward functionality.',
     timestamp: '2024-01-12T16:45:00Z',
     status: 'new',
     company: 'FinTech Solutions'

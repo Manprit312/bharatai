@@ -27,7 +27,7 @@ export function ServicePopup({ isOpen, onClose, projectType }: ServicePopupProps
         message: formData.message,
         projectType: projectType,        
       })
-      toast.success("Request sent successfully! We'll get back to you soon. 📧")
+      toast.success("Request sent successfully! I will get back to you soon. 📧")
       
       setIsSubmitted(true)
       setFormData({ name: '', email: '', message: '' })
@@ -106,7 +106,7 @@ export function ServicePopup({ isOpen, onClose, projectType }: ServicePopupProps
                 </motion.div>
                 <h2 className="text-2xl font-bold">Get {projectType} ✨</h2>
               </div>
-              <p className="text-cyan-100 text-sm">Tell us about your {projectType.toLowerCase()} needs 🎯</p>
+              <p className="text-cyan-100 text-sm">Tell me about your {projectType.toLowerCase()} needs 🎯</p>
             </div>
 
             <div className="p-5 overflow-y-auto max-h-[calc(95vh-120px)]">
@@ -190,7 +190,7 @@ export function ServicePopup({ isOpen, onClose, projectType }: ServicePopupProps
                       onChange={handleChange}
                       disabled={isSubmitting}
                       className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 focus:outline-none transition-all resize-none text-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                      placeholder={`Tell us about your ${projectType.toLowerCase()} requirements, timeline, and any specific features you need...`}
+                      placeholder={`Tell me about your ${projectType.toLowerCase()} requirements, timeline, and required features...`}
                       required
                     />
                   </div>

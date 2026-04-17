@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function Whatsapp() {
     const handleWhatsAppClick = () => {
-        window.open('https://api.whatsapp.com/send/?phone=916202018140&text&type=phone_number&app_absent=0', '_blank')
+        window.open('https://api.whatsapp.com/send/?phone=918264874761&text&type=phone_number&app_absent=0', '_blank')
     }
 
     return (

@@ -7,9 +7,11 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { RoughNotation } from "react-rough-notation"
 import { ArrowRight, Rocket, Clock, DollarSign, Users, CheckCircle, Zap, Calendar } from 'lucide-react'
 import { useScheduleCall } from '@/hooks/useScheduleCall'
+import { useRouter } from 'next/navigation'
 
 function Mvp() {
     const { scheduleCall } = useScheduleCall()
+    const router = useRouter()
     
     const handleScheduleCall = () => {
         const tomorrow = new Date()
@@ -20,7 +22,7 @@ function Mvp() {
         endTime.setHours(11, 0, 0, 0)
         
         scheduleCall({
-            title: 'MVP Consultation - BharatAI Software',
+            title: 'MVP Discussion - Manprit Dev',
             description: 'Discuss your MVP idea and create a roadmap to bring it to market quickly and efficiently.',
             startTime: tomorrow.toISOString(),
             endTime: endTime.toISOString()
@@ -31,7 +33,7 @@ function Mvp() {
         {
             icon: Clock,
             title: "Rapid Development",
-            description: "Get your MVP to market in 4-8 weeks with our agile development process."
+            description: "Get your MVP to market in 4-8 weeks with an iterative development process."
         },
         {
             icon: DollarSign,
@@ -92,7 +94,7 @@ function Mvp() {
                         animation="slideUp"
                         by="word"
                     >
-                        Turn your innovative ideas into market-ready products with our streamlined
+                        Turn your innovative ideas into market-ready products with a streamlined
                         MVP development process. Validate, learn, and scale efficiently.
                     </TextAnimate>
                 </div>
@@ -110,12 +112,12 @@ function Mvp() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                Why Choose Our MVP Development?
+                                Why Choose This MVP Approach?
                             </TextAnimate>
 
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                We help startups and enterprises validate their ideas quickly and cost-effectively.
-                                Our MVP approach focuses on core functionality while maintaining scalability for future growth.
+                                I help startups and product teams validate ideas quickly and cost-effectively.
+                                This approach focuses on core functionality while maintaining scalability for future growth.
                             </p>
                         </div>
 
@@ -144,7 +146,10 @@ function Mvp() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 }}
                         >
-                            <InteractiveHoverButton className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300">
+                            <InteractiveHoverButton
+                                onClick={() => router.push('/contact-us')}
+                                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300"
+                            >
                                 <span className="flex items-center gap-2">
                                     Start Your MVP
                                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -215,7 +220,7 @@ function Mvp() {
                         animation="slideUp"
                         by="word"
                     >
-                        Our MVP Development Process
+                        MVP Development Process
                     </TextAnimate>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -261,7 +266,10 @@ function Mvp() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <InteractiveHoverButton className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold">
+                        <InteractiveHoverButton
+                            onClick={() => router.push('/contact-us')}
+                            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold"
+                        >
                             <span className="flex items-center gap-2">
                                 Get Started Now
                                 <Rocket className="w-5 h-5" />

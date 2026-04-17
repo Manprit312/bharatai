@@ -55,24 +55,27 @@ function Contact() {
     const contactInfo = [
         {
             icon: Mail,
-            title: "Email Us",
-            value: "founder@aydpm.in",
-            description: "Send us an email anytime",
-            color: "text-blue-600"
+            title: "Email Me",
+            value: "mnprt312@gmail.com",
+            description: "Send me an email anytime",
+            color: "text-blue-600",
+            href: "mailto:mnprt312@gmail.com"
         },
         {
             icon: Phone,
-            title: "Call Us",
-            value: "+91 6202018140",
-            description: "Mon-Fri from 8am to 6pm",
-            color: "text-purple-600"
+            title: "Call Me",
+            value: "+91 8264874761",
+            description: "Mon-Sat for project calls",
+            color: "text-purple-600",
+            href: "tel:+918264874761"
         },
         {
             icon: MapPin,
-            title: "Visit Us",
-            value: " Block 51, Bara Bazar Road , ORN, Karol Bagh , Delhi",
-            description: "Our office location",
-            color: "text-cyan-500"
+            title: "Location",
+            value: "Mohali, Punjab, India",
+            description: "Remote collaboration worldwide",
+            color: "text-cyan-500",
+            href: "https://maps.google.com/?q=Mohali,Punjab,India"
         }
     ]
 
@@ -106,8 +109,7 @@ function Contact() {
                         animation="slideUp"
                         by="word"
                     >
-                        Ready to start your next project? We'd love to hear from you.
-                        Send us a message and we'll respond as soon as possible.
+                        Ready to build your next product? Send a message and I will get back with next steps.
                     </TextAnimate>
                 </div>
 
@@ -130,16 +132,21 @@ function Contact() {
                                     whileHover={{ scale: 1.02 }}
                                     className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-600 hover:shadow-lg transition-all duration-300"
                                 >
-                                    <div className="flex items-start space-x-4">
+                                    <a
+                                        href={info.href}
+                                        target={info.href.startsWith('http') ? '_blank' : undefined}
+                                        rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                        className="flex items-start space-x-4"
+                                    >
                                         <div className={`p-3 bg-yellow-100 rounded-xl ${info.color}`}>
                                             <info.icon className="w-6 h-6" />
                                         </div>
                                         <div>
                                             <h3 className="text-black font-semibold text-lg mb-1">{info.title}</h3>
-                                            <p className="text-blue-600 font-medium mb-1">{info.value}</p>
+                                            <p className="text-blue-600 font-medium mb-1 hover:underline">{info.value}</p>
                                             <p className="text-gray-600 text-sm">{info.description}</p>
                                         </div>
-                                    </div>
+                                    </a>
                                 </motion.div>
                             ))}
                         </div>
@@ -178,8 +185,8 @@ function Contact() {
                         >
                             <h3 className="text-black font-semibold text-lg mb-2">Quick Response Guarantee</h3>
                             <p className="text-gray-700 text-sm">
-                                We respond to all inquiries within 24 hours. For urgent matters,
-                                call us directly for immediate assistance.
+                                I respond to all inquiries within 24 hours. For urgent matters,
+                                call directly for immediate assistance.
                             </p>
                         </motion.div>
                     </motion.div>

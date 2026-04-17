@@ -28,7 +28,6 @@ const FILTERS = {
     { value: 'web-dev', label: 'Web Development', icon: '💻' },
     { value: 'mobile-app', label: 'Mobile App', icon: '📱' },
     { value: 'ecommerce', label: 'E-commerce', icon: '🛒' },
-    { value: 'blockchain', label: 'Blockchain', icon: '⛓️' },
     { value: 'other', label: 'Other', icon: '🎯' }
   ]
 }

@@ -1,45 +1,59 @@
-import { Code, Cog, Database, Cloud, Brain, TestTube, BarChart3, Layers } from "lucide-react"
+import { Code, Cog, Database, Cloud, Brain, Smartphone, Monitor, CreditCard } from "lucide-react"
 
 const services = [
     {
         icon: '/icons/mobile-app.png',
         title: 'Mobile App Development',
-        body: 'Create powerful iOS and Android applications with cutting-edge technology and user-friendly interfaces. From concept to deployment, we ensure smooth performance, scalability, and seamless integration.',
+        body: 'Create powerful iOS and Android applications with user-friendly interfaces. From concept to deployment, each app is built for smooth performance and scalability.',
         features: ['Native iOS & Android', 'Cross-Platform Solutions', 'App Store Optimization'],
         url: '#mobile-app'
     },
     {
         icon: '/icons/website.png',
-        title: 'Website Development',
-        body: 'Build responsive, fast, and SEO-optimized websites that drive business growth and engagement. We focus on modern design, intuitive navigation, and cross-browser compatibility.',
-        features: ['Responsive Design', 'SEO Optimization', 'Performance Focused'],
-        url: '#website'
+        title: 'Web Apps',
+        body: 'Build modern, fast, and scalable web applications with strong UX and maintainable code architecture.',
+        features: ['Responsive UX', 'Secure APIs', 'Performance Focused'],
+        url: '#web-apps'
     },
     {
         icon: '/icons/ecom.png',
         title: 'E-commerce Solutions',
-        body: 'Develop robust online stores with secure payment systems and inventory management. Our solutions include product catalogs, advanced search, and mobile-friendly checkout experiences.',
+        body: 'Develop robust online stores with secure payment systems and inventory management. Deliverables include product catalogs, advanced search, and mobile-friendly checkout.',
         features: ['Secure Payments', 'Inventory Management', 'Analytics Dashboard'],
         url: '#ecommerce'
     },
     {
-        icon: '/icons/blockchin.png',
-        title: 'Blockchain Development',
-        body: 'Build decentralized applications and smart contracts with blockchain technology. We specialize in secure, transparent, and scalable blockchain solutions tailored to your industry.',
-        features: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces'],
-        url: '#blockchain'
+        icon: '/icons/native.png',
+        title: 'Desktop Apps',
+        body: 'Build desktop software with reliable performance and intuitive experiences for business and power users.',
+        features: ['Electron-Based Apps', 'Cross-Platform Builds', 'Offline Support'],
+        url: '#desktop-apps'
     },
     {
         icon: '/icons/native.png',
-        title: 'Native App Development',
-        body: 'Create high-performance cross-platform applications with a native user experience. Our team ensures apps are optimized for both iOS and Android devices with smooth UI/UX.',
-        features: ['Cross-Platform', 'Native Performance', 'Unified Codebase'],
-        url: '#native'
+        title: 'Ionic Apps',
+        body: 'Develop robust Ionic applications for Android and iOS with reusable components and production-ready architecture.',
+        features: ['Ionic + TypeScript', 'Mobile-First UX', 'Fast Iteration'],
+        url: '#ionic-apps'
+    },
+    {
+        icon: '/icons/website.png',
+        title: 'PWA Apps',
+        body: 'Convert products into installable progressive web apps with offline support and app-like behavior.',
+        features: ['Installable Web App', 'Offline Caching', 'Push-Ready Foundation'],
+        url: '#pwa-apps'
+    },
+    {
+        icon: '/icons/ai.png',
+        title: 'Chrome Extensions',
+        body: 'Design and build Chrome extensions that automate workflows and extend product functionality in-browser.',
+        features: ['Manifest V3', 'Extension UI/UX', 'API Integrations'],
+        url: '#chrome-extensions'
     },
     {
         icon: '/icons/digtalm.png',
         title: 'Digital Marketing',
-        body: 'Boost your online presence with comprehensive digital marketing strategies. From SEO to social media management, we help you reach your target audience effectively.',
+        body: 'Boost your online presence with practical digital marketing strategy, from SEO foundations to social media execution.',
         features: ['SEO & SEM', 'Social Media', 'Content Strategy'],
         url: '#digital-marketing'
     }
@@ -68,6 +82,26 @@ const categories = [
         description: 'Robust backend technologies for building scalable and secure server-side applications.'
     },
     {
+        id: 'mobile',
+        name: 'Mobile Apps',
+        icon: Smartphone,
+        color: 'text-cyan-600',
+        bgColor: 'bg-cyan-50',
+        borderColor: 'border-cyan-200',
+        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&w=800&q=80',
+        description: 'Cross-platform and hybrid mobile technologies used to ship polished app experiences.'
+    },
+    {
+        id: 'desktop',
+        name: 'Desktop Apps',
+        icon: Monitor,
+        color: 'text-yellow-600',
+        bgColor: 'bg-yellow-50',
+        borderColor: 'border-yellow-200',
+        image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&w=800&q=80',
+        description: 'Desktop product stack for building reliable apps with modern web technologies.'
+    },
+    {
         id: 'database',
         name: 'Databases',
         icon: Database,
@@ -89,43 +123,23 @@ const categories = [
     },
     {
         id: 'ai',
-        name: 'AI/ML',
+        name: 'AI Integrations',
         icon: Brain,
         color: 'text-cyan-600',
         bgColor: 'bg-cyan-50',
         borderColor: 'border-cyan-200',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&w=800&q=80',
-        description: 'Advanced AI and machine learning frameworks for intelligent applications.'
+        description: 'Practical AI integrations for smart product workflows and automation features.'
     },
     {
-        id: 'testing',
-        name: 'Testing',
-        icon: TestTube,
+        id: 'integrations',
+        name: 'Payments & Integrations',
+        icon: CreditCard,
         color: 'text-yellow-600',
         bgColor: 'bg-yellow-50',
         borderColor: 'border-yellow-200',
-        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&w=800&q=80',
-        description: 'Comprehensive testing frameworks to ensure code quality and reliability.'
-    },
-    {
-        id: 'monitoring',
-        name: 'Monitoring',
-        icon: BarChart3,
-        color: 'text-cyan-600',
-        bgColor: 'bg-cyan-50',
-        borderColor: 'border-cyan-200',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=800&q=80',
-        description: 'Monitoring and observability tools for system performance tracking.'
-    },
-    {
-        id: 'web3',
-        name: 'Web3 & APIs',
-        icon: Layers,
-        color: 'text-yellow-600',
-        bgColor: 'bg-yellow-50',
-        borderColor: 'border-yellow-200',
-        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&w=800&q=80',
-        description: 'Web3 technologies and APIs for decentralized applications and blockchain integration.'
+        image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?ixlib=rb-4.0.3&w=800&q=80',
+        description: 'Production integrations for payments, subscriptions, and third-party product workflows.'
     }
 ]
 

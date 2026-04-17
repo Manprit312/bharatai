@@ -11,7 +11,7 @@ function Technology() {
     const secondRow = TechStack.slice(Math.ceil(TechStack.length / 3), Math.ceil(TechStack.length * 2 / 3))
     const thirdRow = TechStack.slice(Math.ceil(TechStack.length * 2 / 3))
 
-    const TechCard = ({ tech, index }: { tech: any, index: number }) => (
+    const TechCard = ({ tech, index }: { tech: { name: string; description: string; color: string; icon: React.ComponentType<{ className?: string }> }, index: number }) => (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ function Technology() {
                         className="flex items-center justify-center gap-2 text-blue-600 mb-4"
                     >
                         <div className="w-8 h-px bg-blue-600"></div>
-                        <span className="text-sm font-medium tracking-wider uppercase">Our Tech Stack</span>
+                        <span className="text-sm font-medium tracking-wider uppercase">Tech Stack I Use</span>
                         <div className="w-8 h-px bg-blue-600"></div>
                     </motion.div>
 
@@ -78,8 +78,8 @@ function Technology() {
                         animation="slideUp"
                         by="word"
                     >
-                        We leverage the latest and most powerful technologies to build 
-                        scalable, secure, and high-performance solutions for your business.
+                        I use modern, reliable technologies to build scalable, secure,
+                        and production-ready digital products.
                     </TextAnimate>
                 </div>
 
@@ -125,7 +125,7 @@ function Technology() {
                         <div className="text-gray-600">Technologies</div>
                     </div>
                     <div className="text-center p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-                        <div className="text-3xl font-bold text-cyan-500 mb-2">5+</div>
+                        <div className="text-3xl font-bold text-cyan-500 mb-2">12+</div>
                         <div className="text-gray-600">Years Experience</div>
                     </div>
                     <div className="text-center p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
@@ -133,8 +133,8 @@ function Technology() {
                         <div className="text-gray-600">Modern Stack</div>
                     </div>
                     <div className="text-center p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-                        <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-                        <div className="text-gray-600">Updates</div>
+                        <div className="text-3xl font-bold text-purple-600 mb-2">SaaS</div>
+                        <div className="text-gray-600">Product Focus</div>
                     </div>
                 </motion.div>
             </div>

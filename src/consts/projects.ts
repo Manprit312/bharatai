@@ -4,219 +4,224 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiTypescript,
+  SiJavascript,
   SiMongodb,
-  SiPostgresql,
   SiFirebase,
-  SiTailwindcss,
-  SiFlutter,
-  SiSolidity,
-  SiWeb3Dotjs,
-  SiEthereum,
   SiStripe,
-  SiFramer,
-  SiGooglemaps,
-  SiSanity
+  SiTailwindcss,
+  SiElectron,
+  SiGooglechrome,
+  SiIonic,
+  SiKotlin,
+  SiGoogleads,
+  SiGoogleanalytics,
+  SiGoogleplay,
+  SiGooglesearchconsole
 } from 'react-icons/si'
-import { FaReact } from 'react-icons/fa'
+import { FaJava, FaReact } from 'react-icons/fa'
 
 export interface Project {
   id: string
   title: string
   description: string
-  category: 'web' | 'mobile' | 'ecommerce' | 'blockchain'
+  category: 'web' | 'desktop' | 'extension' | 'app'
   image: string
   techStack: string[]
   liveUrl?: string
   githubUrl?: string
-  status: 'completed' | 'ongoing' | 'upcoming'
+  status: 'completed' | 'ongoing'
 }
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'Modern e-commerce platform with advanced features including payment integration, inventory management, and analytics dashboard.',
-    category: 'ecommerce',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    liveUrl: 'https://demo-ecommerce.com',
+    title: 'unMix Desktop Application',
+    description: 'Desktop application published on Microsoft Store for audio separation workflows with product-focused user experience.',
+    category: 'desktop',
+    image: '/image/project.png',
+    techStack: ['Electron', 'React', 'Node.js', 'Stripe'],
+    liveUrl: 'https://apps.microsoft.com/detail/xpdnxlwj897k37?hl=en-US&gl=US',
     status: 'completed'
   },
   {
     id: '2',
-    title: 'Food Delivery App',
-    description: 'Cross-platform mobile app for food delivery with real-time tracking, payment integration, and restaurant management.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&h=400&fit=crop',
-    techStack: ['React Native', 'Firebase', 'Google Maps', 'Stripe'],
-    liveUrl: 'https://foodapp-demo.com',
+    title: 'E-commerce Website',
+    description: 'Next.js based e-commerce storefront with product-first UX and conversion-focused layout.',
+    category: 'web',
+    image: '/image/project.png',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    liveUrl: 'https://ecommerce-website-eight-mu.vercel.app/',
     status: 'completed'
   },
   {
     id: '3',
-    title: 'Corporate Website',
-    description: 'Professional corporate website with CMS, blog functionality, and contact management system.',
+    title: 'Multi Service Booking Platform',
+    description: 'Service booking platform for multiple categories with streamlined user flows.',
     category: 'web',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind', 'Sanity'],
-    liveUrl: 'https://corporate-demo.com',
+    image: '/image/trans.png',
+    techStack: ['Next.js', 'React', 'Node.js', 'MongoDB'],
+    liveUrl: 'https://multiservices-alpha.vercel.app/',
     status: 'completed'
   },
   {
     id: '4',
-    title: 'DeFi Trading Platform',
-    description: 'Decentralized finance platform with smart contracts, token staking, and yield farming features.',
-    category: 'blockchain',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop',
-    techStack: ['Solidity', 'Web3.js', 'React', 'Ethereum'],
-    status: 'ongoing'
+    title: 'TechVoult Website (PWA)',
+    description: 'Modern company website with PWA capabilities and responsive service presentation.',
+    category: 'web',
+    image: '/image/hero.png',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    liveUrl: 'https://tech-voult.vercel.app/',
+    status: 'completed'
   },
   {
     id: '5',
-    title: 'Healthcare App',
-    description: 'Mobile healthcare application for patient management, telemedicine, and appointment scheduling.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop',
-    techStack: ['Flutter', 'Firebase', 'Node.js'],
-    status: 'ongoing'
+    title: 'TechVoult Admin Panel',
+    description: 'Admin dashboard implementation for operational analytics and content workflows.',
+    category: 'web',
+    image: '/image/computer.png',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    liveUrl: 'https://tech-voult-admin-panel.vercel.app/',
+    status: 'completed'
   },
   {
     id: '6',
-    title: 'Portfolio Website',
-    description: 'Modern portfolio website with animations, dark mode, and responsive design.',
+    title: 'GeneVeda Biosciences',
+    description: 'Service and research website with strong information architecture for bioscience offerings.',
     category: 'web',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'Framer Motion', 'Tailwind', 'TypeScript'],
-    liveUrl: 'https://portfolio-demo.com',
+    image: '/image/computer.jpg',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    liveUrl: 'https://geneveda-biosciences.vercel.app/',
     status: 'completed'
   },
   {
     id: '7',
-    title: 'Fashion Store',
-    description: 'E-commerce platform for fashion with AR try-on features and personalized recommendations.',
-    category: 'ecommerce',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
-    techStack: ['React', 'Node.js', 'PostgreSQL'],
-    status: 'upcoming'
+    title: 'E-commerce Admin Dashboard',
+    description: 'Admin-focused dashboard for e-commerce operations and internal business workflows.',
+    category: 'web',
+    image: '/image/project.png',
+    techStack: ['Next.js', 'React', 'TypeScript'],
+    liveUrl: 'https://ecommerce-admin-dashboard-red-two.vercel.app/',
+    status: 'completed'
   },
   {
     id: '8',
-    title: 'NFT Marketplace',
-    description: 'Blockchain-based NFT marketplace with minting, trading, and auction features.',
-    category: 'blockchain',
-    image: 'https://images.unsplash.com/photo-1640161704729-cbe966a08476?w=600&h=400&fit=crop',
-    techStack: ['Solidity', 'React', 'Ethereum'],
-    status: 'upcoming'
+    title: 'GameSee: Livestream & Esports',
+    description: 'Associated with AppSmartz (Aug 2020 - Present). Mobile livestream platform for gameplay sharing, esports tournaments, pro-gamer interaction, and gaming tips discovery.',
+    category: 'app',
+    image: '/image/computer.jpg',
+    techStack: ['Kotlin', 'Firebase', 'Google Analytics', 'Google Ads', 'Play Store'],
+    liveUrl: 'https://play.google.com/store/apps/details?id=tv.gamesee&hl=en_US',
+    status: 'ongoing'
   },
   {
     id: '9',
-    title: 'Learning Management System',
-    description: 'Comprehensive LMS platform with course management, student tracking, and interactive learning modules.',
+    title: 'Appsmartz Website',
+    description: 'Company website delivered with responsive layouts and performance-first frontend implementation.',
     category: 'web',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind'],
-    liveUrl: 'https://lms-demo.com',
+    image: '/image/hero.png',
+    techStack: ['React', 'JavaScript', 'Tailwind'],
+    liveUrl: 'https://appsmartz.com/',
     status: 'completed'
   },
   {
     id: '10',
-    title: 'Fitness Tracker App',
-    description: 'Mobile fitness application with workout tracking, nutrition monitoring, and social features.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
-    techStack: ['React Native', 'Firebase', 'Node.js'],
-    status: 'ongoing'
+    title: 'Storyboats',
+    description: 'React/Next.js website with frontend enhancements and user-friendly content flow.',
+    category: 'web',
+    image: '/image/team_2.jpg',
+    techStack: ['Next.js', 'React', 'TypeScript'],
+    liveUrl: 'https://storyboats.com/',
+    status: 'completed'
   },
   {
     id: '11',
-    title: 'Real Estate Platform',
-    description: 'Property listing and management platform with virtual tours and mortgage calculator.',
+    title: 'App Screen Recorder Website',
+    description: 'Product website for a screen recording tool with clean UI and conversion-oriented layout.',
     category: 'web',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps'],
-    liveUrl: 'https://realestate-demo.com',
+    image: '/image/computer.png',
+    techStack: ['React', 'JavaScript', 'Tailwind'],
+    liveUrl: 'https://appscreenrecorder.com/',
     status: 'completed'
   },
   {
     id: '12',
-    title: 'Crypto Wallet',
-    description: 'Secure cryptocurrency wallet with multi-chain support and DeFi integration.',
-    category: 'blockchain',
-    image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&h=400&fit=crop',
-    techStack: ['Solidity', 'Web3.js', 'React', 'Ethereum'],
-    status: 'ongoing'
+    title: 'Screen Recorder Chrome Extension',
+    description: 'Chrome extension for screen recording and browser-based productivity workflows.',
+    category: 'extension',
+    image: '/image/rocket.jpg',
+    techStack: ['Chrome Extension', 'React', 'TypeScript'],
+    liveUrl: 'https://chromewebstore.google.com/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden?hl=en&pli=1',
+    status: 'completed'
   },
   {
     id: '13',
-    title: 'Travel Booking Platform',
-    description: 'Comprehensive travel booking system with flight, hotel, and package reservations.',
-    category: 'ecommerce',
-    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
-    status: 'upcoming'
+    title: 'ASO Tool by Appahead',
+    description: 'Chrome extension built for app store optimization workflows and market visibility support.',
+    category: 'extension',
+    image: '/image/team_3.jpg',
+    techStack: ['Chrome Extension', 'JavaScript', 'Analytics'],
+    liveUrl: 'https://chromewebstore.google.com/detail/aso-tool-by-appahead/lieclbckelnmnnbgpoabacgheecgamkd',
+    status: 'completed'
   },
   {
     id: '14',
-    title: 'Event Management App',
-    description: 'Mobile app for event scheduling, ticket booking, and attendee management with QR check-in.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=600&h=400&fit=crop',
-    techStack: ['Flutter', 'Firebase', 'Stripe'],
+    title: 'Vocal Remover - Music Separator',
+    description: 'Chrome extension for 2/4 stem audio separation with workflow-focused browser UX.',
+    category: 'extension',
+    image: '/image/mvp.jpg',
+    techStack: ['Chrome Extension', 'Firebase', 'Stripe'],
+    liveUrl: 'https://chromewebstore.google.com/detail/vocal-remover-music-separ/bdgbhdnmgjkbpedemhmphgfjabmoagbk',
     status: 'completed'
   },
   {
     id: '15',
-    title: 'AI Content Generator',
-    description: 'Web app that generates blog posts, SEO text, and images using AI APIs.',
-    category: 'web',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'TypeScript', 'Tailwind', 'Sanity'],
+    title: 'Screen Recorder',
+    description: 'Associated with AppSmartz (Jun 2019 - Present). Mobile screen recorder app with front camera support and live streaming to multiple platforms.',
+    category: 'app',
+    image: '/image/project.png',
+    techStack: ['Kotlin', 'Firebase', 'Google Ads', 'AdMob', 'Play Store'],
+    liveUrl: 'https://appscreenrecorder.com/',
     status: 'ongoing'
   },
   {
     id: '16',
-    title: 'Music Streaming App',
-    description: 'Cross-platform music app with playlists, offline downloads, and AI-based recommendations.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop',
-    techStack: ['React Native', 'Node.js', 'PostgreSQL'],
-    status: 'upcoming'
-  },
-  {
-    id: '17',
-    title: 'DAO Governance Platform',
-    description: 'Blockchain platform for decentralized voting, proposals, and treasury management.',
-    category: 'blockchain',
-    image: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&h=400&fit=crop',
-    techStack: ['Solidity', 'Web3.js', 'React', 'Ethereum'],
-    status: 'upcoming'
-  },
-  {
-    id: '18',
-    title: 'Online Learning Mobile App',
-    description: 'Mobile-first LMS app with gamified learning and progress tracking.',
-    category: 'mobile',
-    image: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&h=400&fit=crop',
-    techStack: ['Flutter', 'Firebase', 'Node.js'],
-    status: 'ongoing'
-  },
-  {
-    id: '19',
-    title: 'Job Recruitment Platform',
-    description: 'Web app for job listings, candidate profiles, and application tracking system.',
-    category: 'web',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop',
-    techStack: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind'],
+    title: 'unMix : Vocal Remover',
+    description: 'Associated with AppSmartz (May 2024 - Jan 2025). AI-powered music separator for vocals, instrumental, drums, and bass extraction with high-quality stem results.',
+    category: 'app',
+    image: '/image/mvp.jpg',
+    techStack: ['Kotlin', 'Firebase', 'Google Analytics', 'Project Management'],
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.vocalremover.unmix&hl=en_US',
     status: 'completed'
   },
   {
-    id: '20',
-    title: 'Crowdfunding Platform',
-    description: 'Decentralized crowdfunding platform enabling tokenized fundraising campaigns.',
-    category: 'blockchain',
-    image: 'https://images.unsplash.com/photo-1639149888905-fb39731f2a2b?w=600&h=400&fit=crop',
-    techStack: ['Solidity', 'React', 'Ethereum'],
-    status: 'ongoing'
+    id: '17',
+    title: 'Radio Fm',
+    description: 'Associated with AppSmartz (Oct 2017 - Jun 2019). Mobile radio streaming application focused on reliable playback and broad station accessibility.',
+    category: 'app',
+    image: '/image/hero.png',
+    techStack: ['Kotlin', 'Java', 'Firebase', 'Play Store'],
+    liveUrl: 'https://play.google.com/store/apps/details?id=com.radio.fmradio&hl=en',
+    status: 'completed'
+  },
+  {
+    id: '18',
+    title: 'Charged Health (Ionic App)',
+    description: 'Health assistant product with AI-powered flows built as an Ionic application.',
+    category: 'app',
+    image: '/image/project.png',
+    techStack: ['Ionic', 'TypeScript', 'Firebase'],
+    liveUrl: 'https://charged.health/',
+    status: 'completed'
+  },
+  {
+    id: '19',
+    title: 'Cloz (Ionic App)',
+    description: 'AI-assisted wardrobe management application built with Ionic app architecture.',
+    category: 'app',
+    image: '/image/mvp.jpg',
+    techStack: ['Ionic', 'TypeScript', 'React'],
+    liveUrl: 'https://app.cloz.pro/',
+    status: 'completed'
   }
 ]
 
@@ -225,17 +230,21 @@ export const techStackIcons: Record<string, IconType> = {
   'Next.js': SiNextdotjs,
   'Node.js': SiNodedotjs,
   'TypeScript': SiTypescript,
+  'JavaScript': SiJavascript,
   'MongoDB': SiMongodb,
-  'PostgreSQL': SiPostgresql,
   'Firebase': SiFirebase,
   'Tailwind': SiTailwindcss,
-  'React Native': FaReact,
-  'Flutter': SiFlutter,
-  'Solidity': SiSolidity,
-  'Web3.js': SiWeb3Dotjs,
-  'Ethereum': SiEthereum,
+  'Electron': SiElectron,
+  'Chrome Extension': SiGooglechrome,
+  'Ionic': SiIonic,
+  'Kotlin': SiKotlin,
+  'Java': FaJava,
   'Stripe': SiStripe,
-  'Google Maps': SiGooglemaps,
-  'Sanity': SiSanity,
-  'Framer Motion': SiFramer
+  'Analytics': FaReact,
+  'Google Ads': SiGoogleads,
+  'AdMob': SiGoogleads,
+  'Google Analytics': SiGoogleanalytics,
+  'Play Store': SiGoogleplay,
+  'Search Console': SiGooglesearchconsole,
+  'Project Management': FaReact
 }

@@ -51,7 +51,7 @@ function FAQ() {
               animation="slideUp"
               by="word"
             >
-              We've Got Answers
+              I Have Answers
             </TextAnimate>
           </div>
 
@@ -60,7 +60,7 @@ function FAQ() {
             animation="slideUp"
             by="word"
           >
-            Find answers to common questions about our services, process, and how we can help bring your project to life.
+            Find answers to common questions about services, process, and how I can help bring your project to life.
           </TextAnimate>
         </div>
 
@@ -125,7 +125,7 @@ function FAQ() {
             Still have questions?
           </h3>
           <p className="text-gray-600 mb-6">
-            Can't find the answer you're looking for? Our team is here to help you with any questions about your project.
+            Can't find the answer you're looking for? I am here to help with any questions about your project.
           </p>
           <button
             onClick={openPopup}

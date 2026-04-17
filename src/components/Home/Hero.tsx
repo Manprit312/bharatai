@@ -24,11 +24,11 @@ const Marquee = dynamic(() => import("@/components/ui/marquee").then(mod => ({ d
 })
 
 const TEXTS = [
-    'DIGITAL EXPERIENCES',
-    'INNOVATIVE SOLUTIONS',
-    'POWERFUL WEBSITES',
-    'MOBILE APPLICATIONS',
-    'SCALABLE PLATFORMS'
+    'SCALABLE SAAS PRODUCTS',
+    'PERFORMANCE-DRIVEN APPS',
+    'FULL-STACK WEB PLATFORMS',
+    'CHROME EXTENSIONS',
+    'AI-ENHANCED WORKFLOWS'
 ] as const
 
 const clients = [
@@ -40,9 +40,9 @@ const clients = [
 ]
 
 const statsData = [
-    { value: "500+", label: "Projects Delivered", color: "text-blue-600", bgColor: "bg-blue-50" },
-    { value: "98%", label: "Client Satisfaction", color: "text-yellow-500", bgColor: "bg-yellow-50" },
-    { value: "24/7", label: "Support Available", color: "text-purple-600", bgColor: "bg-purple-50" }
+    { value: "12+ Years", label: "Hands-On Experience", color: "text-blue-600", bgColor: "bg-blue-50" },
+    { value: "7+", label: "Major Features Shipped", color: "text-yellow-500", bgColor: "bg-yellow-50" },
+    { value: "35%", label: "Engagement Lift Delivered", color: "text-purple-600", bgColor: "bg-purple-50" }
 ]
 
 const BackgroundElements = memo(() => (
@@ -278,7 +278,7 @@ const HeroImageSection = memo(() => {
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-yellow-500/20 rounded-3xl"></div>
                     <img
                         src="/image/computer.png"
-                        alt="Premium Software Development"
+                        alt="Software development workspace"
                         width={600}
                         height={600}
                         loading="eager"
@@ -385,8 +385,8 @@ const ClientShowcase = memo(() => {
                 avatarUrls={clients}
             />
             <div className="text-sm text-gray-600">
-                <div className="font-semibold text-gray-800">Trusted by 500+ clients</div>
-                <div className="text-xs">Join successful businesses worldwide</div>
+                <div className="font-semibold text-gray-800">Full-stack projects in production</div>
+                <div className="text-xs">Web, desktop, and extension products</div>
             </div>
         </div>
     )
@@ -458,7 +458,7 @@ function Hero() {
                     className="flex items-center py-2 border-dashed mt-16 md:mt-16 mb-4 justify-center gap-2 text-black border-2 border-blue-600 bg-yellow-50 rounded-full px-3 w-fit mx-auto"
                 >
                     <Sparkles className="w-4 h-4" />
-                    <span className="text-xs md:text-sm font-medium tracking-wider uppercase">Premium Software Solutions</span>
+                    <span className="text-xs md:text-sm font-medium tracking-wider uppercase">SaaS-Focused Full-Stack Developer</span>
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
@@ -475,7 +475,7 @@ function Hero() {
                                 animation="slideUp"
                                 by="character"
                             >
-                                We Transform IDEAS INTO
+                                I BUILD IDEAS INTO
                             </TextAnimate>
 
                             <div className="flex items-center">
@@ -498,9 +498,8 @@ function Hero() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                Empowering businesses with cutting-edge technology solutions.
-                                From mobile apps to enterprise platforms, we deliver excellence
-                                that drives growth and innovation.
+                                I help teams and founders ship reliable SaaS products using React, Next.js,
+                                Node.js, and TypeScript. I focus on performance, maintainability, and user-centered execution.
                             </TextAnimate>
                         </div>
 
@@ -524,7 +523,7 @@ function Hero() {
                                 onClick={handleContactClick}
                             >
                                 <span className="flex items-center gap-2">
-                                    Start Your Project
+                                    Book a Call
                                     <ArrowRight className="w-5 h-5" />
                                 </span>
                             </InteractiveHoverButton>
@@ -534,7 +533,7 @@ function Hero() {
                                 className="border-2 border-cyan-500 hover:border-cyan-600 hover:bg-cyan-50 text-black px-8 py-4 rounded-xl font-semibold text-base bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                 <span className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-cyan-500" />
-                                    View Portfolio
+                                    View Projects
                                 </span>
                             </InteractiveHoverButton>
                         </motion.div>

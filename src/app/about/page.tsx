@@ -23,66 +23,66 @@ function AboutPage() {
         endTime.setHours(11, 0, 0, 0)
         
         scheduleCall({
-            title: 'Consultation Call - BharatAI Software',
-            description: 'Discuss your project requirements and get a custom solution tailored to your business needs.',
+            title: 'Portfolio Discussion - Manprit Dev',
+            description: 'Discuss your product goals, technical scope, and project requirements.',
             startTime: tomorrow.toISOString(),
             endTime: endTime.toISOString()
         })
     }
     const stats = [
-        { icon: Users, value: "50+", label: "Team Members", color: "text-blue-600" },
-        { icon: Award, value: "500+", label: "Projects Completed", color: "text-cyan-500" },
-        { icon: Globe, value: "25+", label: "Countries Served", color: "text-yellow-500" },
-        { icon: Code, value: "5+", label: "Years Experience", color: "text-purple-600" }
+        { icon: Users, value: "12+ Years", label: "Hands-On Experience", color: "text-blue-600" },
+        { icon: Award, value: "7+", label: "Major Features Shipped", color: "text-cyan-500" },
+        { icon: Globe, value: "45%", label: "Teacher Productivity Lift", color: "text-yellow-500" },
+        { icon: Code, value: "35%", label: "UI Engagement Growth", color: "text-purple-600" }
     ]
 
     const values = [
         {
             icon: Target,
             title: "Excellence",
-            description: "We strive for perfection in every line of code and every pixel of design."
+            description: "I value clean architecture, readable code, and reliable delivery standards."
         },
         {
             icon: Heart,
             title: "Passion",
-            description: "We love what we do and it shows in the quality of our work."
+            description: "I enjoy solving complex product problems and turning them into simple user flows."
         },
         {
             icon: Lightbulb,
             title: "Innovation",
-            description: "We stay ahead of technology trends to deliver cutting-edge solutions."
+            description: "I apply modern tooling thoughtfully to improve performance and team productivity."
         },
         {
             icon: Users,
             title: "Collaboration",
-            description: "We work closely with our clients to understand and exceed their expectations."
+            description: "I work closely with founders, designers, and developers to ship confidently."
         }
     ]
 
     const team = [
         {
-            name: "Alex Johnson",
-            role: "CEO & Founder",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=300&q=80",
-            description: "Visionary leader with 10+ years in tech industry"
+            name: "Synex Tech Labs",
+            role: "Full Stack Developer (May 2025 - Present)",
+            image: "/image/project.png",
+            description: "Built a production website, e-commerce admin dashboard, and multi-service platform with measurable UX and delivery improvements."
         },
         {
-            name: "Sarah Chen",
-            role: "CTO",
-            image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&w=300&q=80",
-            description: "Technical expert specializing in scalable architectures"
+            name: "Appsmartz",
+            role: "Fullstack Developer (2023 - May 2025)",
+            image: "/image/computer.jpg",
+            description: "Shipped 7 major features across web and desktop systems, including Chrome extensions and payment-integrated products."
         },
         {
-            name: "Michael Rodriguez",
-            role: "Lead Designer",
-            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=300&q=80",
-            description: "Creative mind behind our stunning user experiences"
+            name: "Deliverables Agency",
+            role: "Frontend Developer (2022 - 2023)",
+            image: "/image/mvp.jpg",
+            description: "Contributed to AI-assisted products, optimized Electron app performance, and implemented secure Stripe/PayPal workflows."
         },
         {
-            name: "Emily Wang",
-            role: "Project Manager",
-            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&w=300&q=80",
-            description: "Ensures seamless project delivery and client satisfaction"
+            name: "Specialized Product Work",
+            role: "Chrome Extensions, Electron, and SaaS Systems",
+            image: "/image/trans.png",
+            description: "Built products like unMix, Edzipp tools, and AI-powered workflows focused on practical user outcomes."
         }
     ]
 
@@ -109,7 +109,7 @@ function AboutPage() {
                                     className="flex items-center gap-2 text-blue-600"
                                 >
                                     <div className="w-8 h-px bg-blue-600"></div>
-                                    <span className="text-sm font-medium tracking-wider uppercase">About BharatAI Software</span>
+                                    <span className="text-sm font-medium tracking-wider uppercase">About Manprit Dev</span>
                                 </motion.div>
 
                                 <div className="text-3xl md:text-5xl font-bold text-black leading-tight">
@@ -129,9 +129,8 @@ function AboutPage() {
                                     animation="slideUp"
                                     by="word"
                                 >
-                                    We are a passionate team of developers, designers, and innovators
-                                    dedicated to transforming ideas into powerful digital solutions that
-                                    drive business growth and create lasting impact.
+                                    I am a full-stack developer focused on turning ideas into
+                                    reliable digital products that create measurable business impact.
                                 </TextAnimate>
                             </div>
 
@@ -156,7 +155,7 @@ function AboutPage() {
                                     onClick={openPopup}
                                     className="border-2 border-purple-600 hover:border-cyan-500 text-black px-8 py-4 rounded-xl font-semibold bg-transparent"
                                 >
-                                    Contact Us
+                                    Contact Me
                                 </InteractiveHoverButton>
                             </motion.div>
                         </motion.div>
@@ -172,8 +171,8 @@ function AboutPage() {
                                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Our Team"
+                                    src="/image/team_1.jpg"
+                                    alt="About section visual"
                                     className="rounded-2xl shadow-2xl border border-gray-200 w-full h-auto"
                                 />
                                 <div className="absolute inset-0 bg-blue-600/10 rounded-2xl"></div>
@@ -222,8 +221,8 @@ function AboutPage() {
                             className="relative"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                alt="Our Journey"
+                                src="/image/project.png"
+                                alt="Portfolio project snapshot"
                                 className="rounded-2xl shadow-2xl border border-gray-200 w-full h-auto"
                             />
                         </motion.div>
@@ -236,7 +235,7 @@ function AboutPage() {
                             <div className="space-y-6">
                                 <div className="text-3xl font-bold text-black">
                                     <TextAnimate animation="slideUp" by="word">
-                                        Our
+                                        My
                                     </TextAnimate>
                                     {" "}
                                     <RoughNotation
@@ -251,19 +250,16 @@ function AboutPage() {
 
                                 <div className="space-y-4 text-gray-600 leading-relaxed">
                                     <p>
-                                        Founded in 2019, BharatAI Software began as a small team of passionate
-                                        developers with a big vision: to bridge the gap between innovative
-                                        ideas and cutting-edge technology solutions.
+                                        My journey started with frontend development and quickly expanded into full-stack
+                                        product engineering, where I focused on building scalable and user-friendly SaaS experiences.
                                     </p>
                                     <p>
-                                        What started as a garage startup has grown into a thriving software
-                                        development company, serving clients across 25+ countries and delivering
-                                        500+ successful projects.
+                                        Over the years, I have worked across React, Next.js, Node.js, Electron, and Chrome
+                                        extensions, shipping production features that improved engagement and usability.
                                     </p>
                                     <p>
-                                        Today, we continue to push boundaries, embrace new technologies, and
-                                        help businesses transform their digital presence with solutions that
-                                        are not just functional, but exceptional.
+                                        Today, I focus on product-quality delivery: writing maintainable code, integrating
+                                        APIs and payments securely, and helping teams move from idea to launch with confidence.
                                     </p>
                                 </div>
                             </div>
@@ -280,10 +276,10 @@ function AboutPage() {
                             animation="slideUp"
                             by="word"
                         >
-                            Our Core Values
+                            Core Values
                         </TextAnimate>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            The principles that guide everything we do and shape our company culture.
+                            The principles that guide how I build products and collaborate.
                         </p>
                     </div>
 
@@ -317,13 +313,13 @@ function AboutPage() {
                     <div className="text-center mb-16">
                         <div className="text-3xl md:text-5xl font-bold text-black mb-6">
                             <TextAnimate animation="slideUp" by="word">
-                                Meet Our
+                                Career
                             </TextAnimate>
                             {" "}
-                            <span className="text-cyan-500 underline decoration-purple-600">Expert Team</span>
+                            <span className="text-cyan-500 underline decoration-purple-600">Highlights</span>
                         </div>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            The talented individuals who make the magic happen behind the scenes.
+                            Key milestones and responsibilities across my professional journey.
                         </p>
                     </div>
 
@@ -353,7 +349,7 @@ function AboutPage() {
                 </div>
             </section>
 
-            {/* Our Clients Section */}
+            {/* Testimonials Section */}
             <section className="py-16 bg-gradient-to-r from-gray-50/50 via-white to-cyan-50/30 relative">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -373,7 +369,7 @@ function AboutPage() {
                             Industry Leaders
                         </TextAnimate>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            We've had the privilege of working with amazing companies across various industries
+                            I have had the privilege of working with teams across diverse product categories
                         </p>
                     </div>
                     
@@ -393,11 +389,11 @@ function AboutPage() {
                             animation="slideUp"
                             by="word"
                         >
-                            Ready to Work With Us?
+                            Ready to Work Together?
                         </TextAnimate>
 
                         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                            Let's discuss how our expertise and passion can help bring your vision to life.
+                            Let's discuss how my product engineering approach can help bring your vision to life.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

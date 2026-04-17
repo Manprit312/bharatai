@@ -12,12 +12,12 @@ import testimonials from '@/consts/testimonials'
 function Clients() {
     const { openPopup, ContactPopup } = useContactPopup()
     const stats = [
-        { icon: Users, value: "500+", label: "Happy Clients" },
-        { icon: Award, value: "98%", label: "Success Rate" },
-        { icon: Star, value: "4.9/5", label: "Client Rating" }
+        { icon: Users, value: "12+ Years", label: "Industry Experience" },
+        { icon: Award, value: "7+", label: "Major Features Shipped" },
+        { icon: Star, value: "4.9/5", label: "Collaboration Rating" }
     ]
 
-    const TestimonialCard = ({ testimonial, index }: { testimonial: any, index: number }) => (
+    const TestimonialCard = ({ testimonial, index }: { testimonial: { rating: number; content: string; name: string; role: string }, index: number }) => (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,16 +36,9 @@ function Clients() {
                 "{testimonial.content}"
             </p>
 
-            <div className="flex items-center space-x-4">
-                <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full border-2 border-gray-600"
-                />
-                <div>
-                    <h4 className="text-black font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                </div>
+            <div>
+                <h4 className="text-black font-semibold">{testimonial.name}</h4>
+                <p className="text-gray-600 text-sm">{testimonial.role}</p>
             </div>
         </motion.div>
     )
@@ -63,7 +56,7 @@ function Clients() {
                         className="flex items-center justify-center gap-2 text-blue-600 mb-6"
                     >
                         <Star className="w-5 h-5" />
-                        <span className="text-sm font-medium tracking-wider uppercase">Client Testimonials</span>
+                        <span className="text-sm font-medium tracking-wider uppercase">Testimonials</span>
                         <Star className="w-5 h-5" />
                     </motion.div>
 
@@ -72,7 +65,7 @@ function Clients() {
                             animation="slideUp"
                             by="word"
                         >
-                            What Our
+                            What People
                         </TextAnimate>
                         <RoughNotation
                             type="underline"
@@ -81,13 +74,13 @@ function Clients() {
                             strokeWidth={3}
                             animationDelay={1000}
                         >
-                            <span className="text-black mx-3">Clients Say</span>
+                            <span className="text-black mx-3">Say</span>
                         </RoughNotation>
                         <TextAnimate
                             animation="slideUp"
                             by="word"
                         >
-                            About Us
+                            About Working With Me
                         </TextAnimate>
                     </div>
 
@@ -96,8 +89,7 @@ function Clients() {
                         animation="slideUp"
                         by="word"
                     >
-                        Don't just take our word for it. Here's what our satisfied clients
-                        have to say about working with BharatAI Software.
+                        Feedback from product teams and collaborators across SaaS and web projects.
                     </TextAnimate>
                 </div>
 
@@ -148,12 +140,12 @@ function Clients() {
                         animation="slideUp"
                         by="word"
                     >
-                        Join Our Growing List of Satisfied Clients
+                        Let's build your next SaaS milestone
                     </TextAnimate>
 
                     <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                        Experience the same level of excellence and dedication that has made
-                        our clients successful in their digital transformation journey.
+                        If you are looking for a developer who can own product delivery end-to-end,
+                        I would love to collaborate.
                     </p>
 
                     <InteractiveHoverButton
@@ -161,7 +153,7 @@ function Clients() {
                         className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                         <span className="flex items-center gap-2">
-                            Start Your Project Today
+                            Start a Conversation
                             <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                         </span>
                     </InteractiveHoverButton>

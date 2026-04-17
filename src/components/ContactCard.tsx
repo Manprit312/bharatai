@@ -15,7 +15,6 @@ const projectOptions = [
     { value: 'web-dev', label: '💻 Web Development' },
     { value: 'mobile-app', label: '📱 Mobile App' },
     { value: 'ecommerce', label: '🛒 E-commerce' },
-    { value: 'blockchain', label: '⛓️ Blockchain' },
     { value: 'ai-ml', label: '🤖 AI/ML' },
     { value: 'digital-marketing', label: '📈 Digital Marketing' },
     { value: 'support-maintenance', label: '🛠️ Support & Maintenance' },
@@ -24,14 +23,13 @@ const projectOptions = [
 ]
 
 const budgetOptions = [
-    { value: 'under-100', label: 'Under $100' },
-    { value: '100-500', label: '$100 - $500' },
-    { value: '500-1k', label: '$500 - $1K' },
-    { value: '1k-5k', label: '$1K - $5K' },
-    { value: '5k-10k', label: '$5K - $10K' },
-    { value: '10k-25k', label: '$10K - $25K' },
-    { value: '25k-50k', label: '$25K - $50K' },
-    { value: '50k+', label: '$50K+' }
+    { value: 'under-50k', label: 'Under ₹50,000' },
+    { value: '50k-1l', label: '₹50,000 - ₹1,00,000' },
+    { value: '1l-3l', label: '₹1,00,000 - ₹3,00,000' },
+    { value: '3l-5l', label: '₹3,00,000 - ₹5,00,000' },
+    { value: '5l-10l', label: '₹5,00,000 - ₹10,00,000' },
+    { value: '10l-20l', label: '₹10,00,000 - ₹20,00,000' },
+    { value: '20l+', label: '₹20,00,000+' }
 ]
 
 function ContactCard() {
@@ -99,8 +97,8 @@ function ContactCard() {
             className="space-y-6"
         >
             <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-black mb-3">Send us a message</h2>
-                <p className="text-gray-600 text-sm md:text-base">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-black mb-3">Send a message</h2>
+                <p className="text-gray-600 text-sm md:text-base">Fill out the form below and I will get back to you within 24 hours.</p>
             </div>
 
             <div className="bg-gray-100/50 backdrop-blur-sm border border-gray-200 rounded-xl p-4 md:p-6">
@@ -216,7 +214,7 @@ function ContactCard() {
                             required
                             disabled={loading}
                             className="w-full px-3 py-2 bg-white/50 border border-gray-300 rounded-lg text-black placeholder-gray-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all duration-200 resize-none disabled:opacity-50 disabled:cursor-not-allowed"
-                            placeholder="Tell us about your project, goals, and requirements..."
+                            placeholder="Tell me about your project, goals, and requirements..."
                         />
                     </div>
 

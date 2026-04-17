@@ -131,7 +131,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                   </motion.div>
                   <h2 className="text-xl sm:text-2xl font-bold">Start Your Project ✨</h2>
                 </div>
-                <p className="text-blue-100 text-sm">Tell us about your project and we'll get back to you within 24 hours 🎯</p>
+                <p className="text-blue-100 text-sm">Tell me about your project and I will get back to you within 24 hours 🎯</p>
               </div>
 
               <div className="p-4 sm:p-5 overflow-y-auto max-h-[calc(95vh-120px)] lg:max-h-[calc(95vh-100px)]">
@@ -148,7 +148,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                       <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-3" />
                     </motion.div>
                     <h3 className="text-xl sm:text-2xl font-bold text-black mb-2">Message Sent! 🎉</h3>
-                    <p className="text-gray-600">We'll get back to you within 24 hours 📧</p>
+                    <p className="text-gray-600">I will get back to you within 24 hours 📧</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -212,7 +212,6 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                           <option>💻 Web Development</option>
                           <option>📱 Mobile App</option>
                           <option>🛒 E-commerce</option>
-                          <option>⛓️ Blockchain</option>
                           <option>🎯 Other</option>
                         </select>
                         <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
@@ -233,7 +232,7 @@ export function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 focus:outline-none transition-all resize-none text-sm"
-                        placeholder="Tell us about your project requirements, timeline, and any specific features you need..."
+                        placeholder="Tell me about your project requirements, timeline, and any specific features you need..."
                         required
                       ></textarea>
                     </div>

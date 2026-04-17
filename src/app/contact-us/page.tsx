@@ -9,10 +9,12 @@ import { Mail, Phone, MapPin, MessageCircle, Clock, Zap, ArrowRight, Calendar, P
 import ContactCard from '@/components/ContactCard'
 import faqs from '@/consts/faqs'
 import { useScheduleCall } from '@/hooks/useScheduleCall'
+import { useRouter } from 'next/navigation'
 
 function ContactPage() {
     const { scheduleCall } = useScheduleCall()
     const [openFAQ, setOpenFAQ] = useState<string | null>(null)
+    const router = useRouter()
 
     const toggleFAQ = (id: string) => {
         setOpenFAQ(openFAQ === id ? null : id)
@@ -27,8 +29,8 @@ function ContactPage() {
         endTime.setHours(11, 0, 0, 0)
         
         scheduleCall({
-            title: 'Consultation Call - BharatAI Software',
-            description: 'Discuss your project requirements and get a custom solution tailored to your business needs.',
+            title: 'Portfolio Discussion - Manprit Dev',
+            description: 'Discuss your project requirements, timeline, and next implementation steps.',
             startTime: tomorrow.toISOString(),
             endTime: endTime.toISOString()
         })
@@ -37,25 +39,25 @@ function ContactPage() {
     const contactMethods = [
         {
             icon: Mail,
-            title: "Email Us",
-            value: "founder@aydpm.in",
-            description: "Send us an email anytime",
+            title: "Email Me",
+            value: "mnprt312@gmail.com",
+            description: "Send me an email anytime",
             color: "text-blue-600",
             bgColor: "bg-blue-500/20"
         },
         {
             icon: Phone,
-            title: "Call Us",
-            value: "+1 (555) 123-4567",
-            description: "Mon-Fri from 8am to 6pm",
+            title: "Call Me",
+            value: "+91 82648 74761",
+            description: "Mon-Sat for project discussions",
             color: "text-cyan-600",
             bgColor: "bg-cyan-500/20"
         },
         {
             icon: MapPin,
-            title: "Visit Us",
-            value: "123 Tech Street, Digital City, DC 12345",
-            description: "Our main office location",
+            title: "Location",
+            value: "Mohali, Punjab, India",
+            description: "Remote collaboration worldwide",
             color: "text-yellow-600",
             bgColor: "bg-yellow-500/20"
         }
@@ -63,21 +65,21 @@ function ContactPage() {
 
     const offices = [
         {
-            city: "New York",
-            address: "123 Tech Street, NY 10001",
-            phone: "+1 (555) 123-4567",
+            city: "Mohali",
+            address: "Punjab, India",
+            phone: "+91 82648 74761",
             image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&w=400&q=80"
         },
         {
-            city: "London",
-            address: "456 Innovation Ave, London SW1A 1AA",
-            phone: "+44 20 7946 0958",
+            city: "Remote",
+            address: "Async + live collaboration",
+            phone: "Zoom / Meet Friendly",
             image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&w=400&q=80"
         },
         {
-            city: "Tokyo",
-            address: "789 Future Blvd, Tokyo 100-0001",
-            phone: "+81 3-1234-5678",
+            city: "Global Clients",
+            address: "Timezone-flexible delivery",
+            phone: "Project-based engagement",
             image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&w=400&q=80"
         }
     ]
@@ -130,8 +132,8 @@ function ContactPage() {
                             animation="slideUp"
                             by="word"
                         >
-                            Ready to transform your ideas into reality? We're here to help you every step of the way.
-                            Get in touch and let's start building your next great project.
+                            Ready to ship your next product milestone? I can help with architecture, implementation,
+                            and deployment across modern web stacks.
                         </TextAnimate>
                     </div>
 
@@ -149,6 +151,18 @@ function ContactPage() {
                                     md:flex-col md:text-center md:p-8 md:mb-0 md:bg-white/90 md:rounded-2xl
                                 "
                             >
+                                <a
+                                    href={
+                                        method.title === "Email Me"
+                                            ? "mailto:mnprt312@gmail.com"
+                                            : method.title === "Call Me"
+                                                ? "tel:+918264874761"
+                                                : "https://maps.google.com/?q=Mohali,Punjab,India"
+                                    }
+                                    target={method.title === "Location" ? "_blank" : undefined}
+                                    rel={method.title === "Location" ? "noopener noreferrer" : undefined}
+                                    className="flex items-center w-full md:flex-col md:text-center"
+                                >
                                 <div className={`
                                     w-10 h-10 ${method.bgColor} rounded-lg flex items-center justify-center flex-shrink-0
                                     md:w-16 md:h-16 md:rounded-xl md:mx-auto md:mb-3
@@ -157,9 +171,10 @@ function ContactPage() {
                                 </div>
                                 <div className="flex-1 md:flex-none ml-3 md:ml-0">
                                     <h3 className="text-base font-bold text-black mb-1 md:text-xl md:mb-2">{method.title}</h3>
-                                    <p className="text-blue-600 font-medium text-sm mb-0.5 md:text-base md:mb-2">{method.value}</p>
+                                    <p className="text-blue-600 font-medium text-sm mb-0.5 md:text-base md:mb-2 hover:underline">{method.value}</p>
                                     <p className="text-gray-600 text-xs md:text-sm">{method.description}</p>
                                 </div>
+                                </a>
                             </motion.div>
                         ))}
                     </div>
@@ -183,16 +198,16 @@ function ContactPage() {
                             <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
                                 <div className="flex items-center space-x-3 mb-4 md:mb-6">
                                     <Clock className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
-                                    <h3 className="text-lg md:text-xl font-bold text-black">Business Hours</h3>
+                                <h3 className="text-lg md:text-xl font-bold text-black">Availability</h3>
                                 </div>
                                 <div className="space-y-2 md:space-y-3 text-gray-600 text-sm md:text-base">
                                     <div className="flex justify-between">
                                         <span>Monday - Friday</span>
-                                        <span className="text-blue-600 font-medium">8:00 AM - 6:00 PM</span>
+                                        <span className="text-blue-600 font-medium">10:00 AM - 7:00 PM IST</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span>Saturday</span>
-                                        <span className="text-blue-600 font-medium">9:00 AM - 4:00 PM</span>
+                                        <span className="text-blue-600 font-medium">11:00 AM - 3:00 PM IST</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span>Sunday</span>
@@ -200,7 +215,7 @@ function ContactPage() {
                                     </div>
                                     <div className="pt-3 md:pt-4 border-t border-gray-200">
                                         <p className="text-xs md:text-sm text-gray-600">
-                                            Emergency support available 24/7 for existing clients
+                                            Messages are usually answered within one business day.
                                         </p>
                                     </div>
                                 </div>
@@ -213,8 +228,8 @@ function ContactPage() {
                                     <h3 className="text-lg md:text-xl font-bold text-black">Quick Response</h3>
                                 </div>
                                 <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                                    We respond to all inquiries within 24 hours. For urgent matters,
-                                    call us directly for immediate assistance.
+                                    I respond to most project inquiries within 24 hours. For urgent discussions,
+                                    call directly to coordinate quickly.
                                 </p>
                                 <div className="flex items-center space-x-2 text-blue-600">
                                     <span className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
@@ -224,7 +239,7 @@ function ContactPage() {
 
                             {/* Services Quick Links */}
                             <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 md:p-8 shadow-sm">
-                                <h3 className="text-lg md:text-xl font-bold text-black mb-4 md:mb-6">Our Services</h3>
+                                <h3 className="text-lg md:text-xl font-bold text-black mb-4 md:mb-6">Service Areas</h3>
                                 <div className="grid grid-cols-2 gap-3 md:gap-4">
                                     {services.map((service, index) => (
                                         <motion.div
@@ -300,7 +315,7 @@ function ContactPage() {
                 </div>
             </section>
 
-            {/* Office Locations */}
+            {/* Collaboration Modes */}
             <section className="py-12 md:py-24 bg-gradient-to-br from-purple-50/30 via-blue-50/20 to-white relative">
                 <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
 
@@ -308,7 +323,7 @@ function ContactPage() {
                     <div className="text-center mb-8 md:mb-16">
                         <div className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 md:mb-6">
                             <span className="inline-block">
-                                Our{" "}
+                                My{" "}
                                 <RoughNotation
                                     type="underline"
                                     show={true}
@@ -317,11 +332,11 @@ function ContactPage() {
                                 >
                                     <span className="text-blue-600">Global</span>
                                 </RoughNotation>
-                                {" "}Presence
+                                {" "}Collaboration
                             </span>
                         </div>
                         <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                            With offices around the world, we're always close to our clients.
+                            I work from India and collaborate with teams globally across flexible time zones.
                         </p>
                     </div>
 
@@ -396,8 +411,11 @@ function ContactPage() {
                                 </span>
                             </InteractiveHoverButton>
 
-                            <InteractiveHoverButton className="border-2 border-blue-600 hover:border-yellow-500 hover:bg-yellow-50 text-blue-600 hover:text-yellow-600 px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold bg-transparent text-sm md:text-base transition-all duration-300">
-                                View Our Work
+                            <InteractiveHoverButton
+                                onClick={() => router.push('/projects')}
+                                className="border-2 border-blue-600 hover:border-yellow-500 hover:bg-yellow-50 text-blue-600 hover:text-yellow-600 px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold bg-transparent text-sm md:text-base transition-all duration-300"
+                            >
+                                View Projects
                             </InteractiveHoverButton>
                         </div>
                     </motion.div>

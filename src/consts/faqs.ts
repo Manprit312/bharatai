@@ -2,42 +2,42 @@ const faqs = [
     {
         id: '1',
         question: 'What services do you offer?',
-        answer: 'We offer comprehensive digital solutions including web development, mobile app development, e-commerce platforms, blockchain development, and digital marketing services. Our team specializes in modern technologies and delivers end-to-end solutions.'
+        answer: 'I offer product-focused development support including web development, app workflows, e-commerce implementation, AI integrations, and technical consulting.'
     },
     {
         id: '2',
         question: 'How long does a typical project take?',
-        answer: 'Project timelines vary based on complexity and scope. A simple website typically takes 2-4 weeks, while complex web applications or mobile apps can take 8-16 weeks. We provide detailed timelines during our initial consultation.'
+        answer: 'Project timelines vary based on complexity and scope. A simple website usually takes 2-4 weeks, while complex applications can take 8-16 weeks. A detailed timeline is shared during initial discovery.'
     },
     {
         id: '3',
         question: 'Do you provide ongoing support and maintenance?',
-        answer: 'Yes, we offer comprehensive support and maintenance packages. This includes regular updates, security patches, performance optimization, and technical support. We believe in long-term partnerships with our clients.'
+        answer: 'Yes. Ongoing support can include updates, security patches, performance optimization, and implementation support after launch.'
     },
     {
         id: '4',
         question: 'What technologies do you work with?',
-        answer: 'We work with modern technologies including React, Next.js, Node.js, TypeScript, Flutter, React Native, MongoDB, PostgreSQL, and blockchain technologies like Solidity and Web3. We stay updated with the latest industry trends.'
+        answer: 'I work with modern technologies including React, Next.js, Node.js, TypeScript, Electron, Firebase, MongoDB, and API-driven integrations.'
     },
     {
         id: '5',
         question: 'Can you help with existing projects?',
-        answer: 'Absolutely! We can help improve, maintain, or completely redesign existing projects. Our team can work with legacy code, perform audits, and implement modern solutions to enhance performance and user experience.'
+        answer: 'Absolutely. I can improve, maintain, or redesign existing products, including legacy code audits and modernization work.'
     },
     {
         id: '6',
         question: 'What is your development process?',
-        answer: 'Our process includes discovery and planning, design and prototyping, development and testing, deployment, and ongoing support. We follow agile methodologies and maintain regular communication throughout the project lifecycle.'
+        answer: 'The process includes discovery, scope planning, implementation, testing, deployment, and optional support. You get clear progress updates throughout delivery.'
     },
     {
         id: '7',
         question: 'Do you work with international clients?',
-        answer: 'Yes, we work with clients globally. We have experience collaborating across different time zones and provide flexible communication schedules to accommodate international partnerships.'
+        answer: 'Yes. I work with teams globally and follow flexible communication schedules across time zones.'
     },
     {
         id: '8',
         question: 'How do you ensure project quality?',
-        answer: 'We follow industry best practices including code reviews, automated testing, performance optimization, and security audits. Our quality assurance process ensures that every project meets high standards before delivery.'
+        answer: 'Quality is maintained through code reviews, testing, performance checks, and secure implementation practices before release.'
     },
     {
         id: '9',
@@ -47,17 +47,17 @@ const faqs = [
     {
         id: '10',
         question: "Do you provide ongoing support?",
-        answer: "Yes, we offer 24/7 support and maintenance packages for all our clients."
+        answer: "Yes, support and maintenance options are available based on project needs."
     },
     {
         id: '11',
         question: "What technologies do you specialize in?",
-        answer: "We work with modern technologies including React, Next.js, Node.js, Python, and more."
+        answer: "I work with modern technologies including React, Next.js, Node.js, TypeScript, and related tooling."
     },
     {
         id: '12',
-        question: "Can you work with our existing team?",
-        answer: "Absolutely! We can integrate with your team or work as an extension of your development resources."
+        question: "Can you work with an existing team?",
+        answer: "Absolutely. I can collaborate directly with your existing team and contribute as an extension of your engineering capacity."
     }
 ]
 

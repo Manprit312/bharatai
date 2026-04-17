@@ -11,10 +11,10 @@ function Projects() {
   const [activeTab, setActiveTab] = useState<string>('web')
 
   const tabs = [
-    { id: 'web', label: 'Web Development' },
-    { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'ecommerce', label: 'E-Commerce' },
-    { id: 'blockchain', label: 'Blockchain' }
+    { id: 'web', label: 'Websites' },
+    { id: 'desktop', label: 'Desktop App' },
+    { id: 'extension', label: 'Chrome Extensions' },
+    { id: 'app', label: 'Ionic Apps' }
   ]
 
   const filteredProjects = projects.filter(project => project.category === activeTab)
@@ -133,6 +133,20 @@ function Projects() {
             )}
           </div>
         </div>
+
+        {project.liveUrl && (
+          <div className="pt-4">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors"
+            >
+              <Eye className="w-4 h-4" />
+              View Live Project
+            </a>
+          </div>
+        )}
       </div>
     </motion.div>
   )
@@ -150,7 +164,7 @@ function Projects() {
             className="flex items-center justify-center gap-2 text-blue-600 mb-6"
           >
             <div className="w-8 h-px bg-blue-600"></div>
-            <span className="text-sm font-medium tracking-wider uppercase">Our Portfolio</span>
+            <span className="text-sm font-medium tracking-wider uppercase">Portfolio Projects</span>
             <div className="w-8 h-px bg-blue-600"></div>
           </motion.div>
 
@@ -182,8 +196,8 @@ function Projects() {
             animation="slideUp"
             by="word"
           >
-            Explore our diverse portfolio of successful projects across web development,
-            mobile applications, e-commerce platforms, and blockchain solutions.
+            Explore real projects across websites, desktop products,
+            Chrome extensions, and Ionic apps.
           </TextAnimate>
         </div>
 

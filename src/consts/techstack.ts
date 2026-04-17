@@ -1,102 +1,90 @@
-import { FaReact, FaVuejs, FaNodeJs, FaPython, FaLaravel, FaJava, FaPhp, FaAws, FaDocker, FaGitAlt } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiFlutter, SiPwa, SiFramer, SiStorybook, SiDjango, SiSpring, SiRust, SiGo, SiCplusplus, SiC, SiMongodb, SiPostgresql, SiRedis, SiFirebase, SiSupabase, SiGraphql, SiSolidity, SiEthereum, SiKubernetes, SiVercel, SiHeroku, SiNetlify, SiAnsible, SiTerraform, SiJenkins, SiGithubactions, SiGitlab, SiTensorflow, SiPytorch, SiNumpy, SiPandas, SiJupyter, SiJest, SiMocha, SiCypress, SiPrometheus, SiGrafana } from "react-icons/si"
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaGitAlt, FaMobileAlt, FaStore } from "react-icons/fa"
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiFlutter,
+  SiPwa,
+  SiFramer,
+  SiMongodb,
+  SiFirebase,
+  SiGithubactions,
+  SiVercel,
+  SiCloudinary,
+  SiJavascript,
+  SiIonic,
+  SiReact,
+  SiElectron,
+  SiOpenai,
+  SiStripe,
+  SiPaypal,
+  SiExpress,
+  SiKotlin,
+  SiGoogleads,
+  SiGoogleanalytics,
+  SiGoogleplay,
+  SiGooglesearchconsole,
+  SiGooglechrome,
+} from "react-icons/si"
 
 const TechStack = [
-    // --- Frontend ---
-    { name: 'React', icon: FaReact, color: 'text-blue-400', description: 'Frontend Library' },
-    { name: 'Next.js', icon: SiNextdotjs, color: 'text-black', description: 'React Framework' },
-    { name: 'Vue.js', icon: FaVuejs, color: 'text-green-400', description: 'Progressive Framework' },
-    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500', description: 'Type Safety' },
-    { name: 'Tailwind', icon: SiTailwindcss, color: 'text-cyan-400', description: 'CSS Framework' },
-    { name: 'Flutter', icon: SiFlutter, color: 'text-blue-300', description: 'Cross-Platform SDK' },
-    { name: 'PWA', icon: SiPwa, color: 'text-purple-400', description: 'Progressive Web Apps' },
-    { name: 'Framer Motion', icon: SiFramer, color: 'text-pink-500', description: 'Animations' },
-    { name: 'Storybook', icon: SiStorybook, color: 'text-red-400', description: 'UI Component Testing' },
+  // Frontend and product UI
+  { name: 'React', icon: FaReact, color: 'text-blue-400', description: 'Frontend Library' },
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-black', description: 'React Framework' },
+  { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400', description: 'Core Language' },
+  { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500', description: 'Type Safety' },
+  { name: 'HTML5', icon: FaHtml5, color: 'text-orange-500', description: 'Markup' },
+  { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500', description: 'Styling' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400', description: 'Utility-First CSS' },
+  { name: 'Framer Motion', icon: SiFramer, color: 'text-pink-500', description: 'Animations' },
+  { name: 'PWA', icon: SiPwa, color: 'text-purple-400', description: 'Progressive Web Apps' },
 
-    // --- Backend ---
-    { name: 'Node.js', icon: FaNodeJs, color: 'text-green-500', description: 'Server Runtime' },
-    { name: 'Python', icon: FaPython, color: 'text-yellow-400', description: 'Backend Language' },
-    { name: 'Django', icon: SiDjango, color: 'text-green-700', description: 'Python Framework' },
-    { name: 'Laravel', icon: FaLaravel, color: 'text-red-500', description: 'PHP Framework' },
-    { name: 'Spring Boot', icon: SiSpring, color: 'text-green-600', description: 'Java Framework' },
-    { name: 'Java', icon: FaJava, color: 'text-red-600', description: 'Enterprise Language' },
-    { name: 'PHP', icon: FaPhp, color: 'text-indigo-500', description: 'Backend Language' },
-    { name: 'Rust', icon: SiRust, color: 'text-orange-500', description: 'System Programming' },
-    { name: 'Go', icon: SiGo, color: 'text-cyan-600', description: 'Backend Language' },
-    { name: 'C++', icon: SiCplusplus, color: 'text-blue-600', description: 'System Language' },
-    { name: 'C', icon: SiC, color: 'text-gray-400', description: 'Low-level Language' },
+  // Mobile, desktop, and extension ecosystem
+  { name: 'Mobile Applications', icon: FaMobileAlt, color: 'text-slate-700', description: 'End-to-End App Delivery' },
+  { name: 'Ionic', icon: SiIonic, color: 'text-blue-400', description: 'Hybrid App Framework' },
+  { name: 'React Native', icon: SiReact, color: 'text-cyan-400', description: 'Native Mobile Apps' },
+  { name: 'Flutter', icon: SiFlutter, color: 'text-blue-300', description: 'Cross-Platform SDK' },
+  { name: 'Kotlin', icon: SiKotlin, color: 'text-purple-500', description: 'Android Development' },
+  { name: 'Java', icon: FaJava, color: 'text-red-600', description: 'Android and Backend Language' },
+  { name: 'Web Extensions', icon: SiGooglechrome, color: 'text-green-500', description: 'Browser Extensions' },
+  { name: 'Electron.js', icon: SiElectron, color: 'text-sky-400', description: 'Desktop Apps' },
 
-    // --- Databases ---
-    { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600', description: 'NoSQL Database' },
-    { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-600', description: 'SQL Database' },
-    { name: 'Redis', icon: SiRedis, color: 'text-red-400', description: 'In-Memory Store' },
-    { name: 'Firebase', icon: SiFirebase, color: 'text-yellow-500', description: 'Backend Service' },
-    { name: 'Supabase', icon: SiSupabase, color: 'text-green-500', description: 'Open-source Firebase Alternative' },
+  // Backend and APIs
+  { name: 'Node.js', icon: FaNodeJs, color: 'text-green-500', description: 'Server Runtime' },
+  { name: 'Express.js', icon: SiExpress, color: 'text-gray-700', description: 'API Framework' },
+  { name: 'OpenAI API', icon: SiOpenai, color: 'text-emerald-500', description: 'AI Integrations' },
 
-    // --- APIs & Web3 ---
-    { name: 'GraphQL', icon: SiGraphql, color: 'text-pink-400', description: 'Query Language' },
-    { name: 'Solidity', icon: SiSolidity, color: 'text-gray-500', description: 'Smart Contracts' },
-    { name: 'Ethereum', icon: SiEthereum, color: 'text-purple-500', description: 'Blockchain Platform' },
+  // Data and BaaS
+  { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600', description: 'NoSQL Database' },
+  { name: 'Firebase', icon: SiFirebase, color: 'text-yellow-500', description: 'Realtime Backend' },
 
-    // --- Cloud & Deployment ---
-    { name: 'AWS', icon: FaAws, color: 'text-orange-400', description: 'Cloud Platform' },
-    { name: 'Docker', icon: FaDocker, color: 'text-blue-500', description: 'Containerization' },
-    { name: 'Kubernetes', icon: SiKubernetes, color: 'text-blue-400', description: 'Orchestration' },
-    { name: 'Vercel', icon: SiVercel, color: 'text-black', description: 'Deployment Platform' },
-    { name: 'Heroku', icon: SiHeroku, color: 'text-purple-500', description: 'PaaS Deployment' },
-    { name: 'Netlify', icon: SiNetlify, color: 'text-green-500', description: 'Hosting & CI/CD' },
-    { name: 'Ansible', icon: SiAnsible, color: 'text-red-500', description: 'IT Automation' },
-    { name: 'Terraform', icon: SiTerraform, color: 'text-purple-400', description: 'Infrastructure as Code' },
-
-    // --- DevOps & CI/CD ---
-    { name: 'Jenkins', icon: SiJenkins, color: 'text-red-600', description: 'CI/CD Tool' },
-    { name: 'GitHub Actions', icon: SiGithubactions, color: 'text-black', description: 'CI/CD Pipeline' },
-    { name: 'GitLab', icon: SiGitlab, color: 'text-orange-600', description: 'DevOps Platform' },
-    { name: 'Git', icon: FaGitAlt, color: 'text-orange-500', description: 'Version Control' },
-
-    // --- AI/ML ---
-    { name: 'TensorFlow', icon: SiTensorflow, color: 'text-orange-500', description: 'ML Framework' },
-    { name: 'PyTorch', icon: SiPytorch, color: 'text-red-600', description: 'Deep Learning Framework' },
-    { name: 'NumPy', icon: SiNumpy, color: 'text-blue-500', description: 'Numerical Computing' },
-    { name: 'Pandas', icon: SiPandas, color: 'text-green-500', description: 'Data Analysis' },
-    { name: 'Jupyter', icon: SiJupyter, color: 'text-orange-400', description: 'Data Science Notebook' },
-
-    // --- Testing ---
-    { name: 'Jest', icon: SiJest, color: 'text-pink-500', description: 'JavaScript Testing' },
-    { name: 'Mocha', icon: SiMocha, color: 'text-brown-500', description: 'JS Test Framework' },
-    { name: 'Cypress', icon: SiCypress, color: 'text-green-500', description: 'End-to-End Testing' },
-
-    // --- Monitoring ---
-    { name: 'Prometheus', icon: SiPrometheus, color: 'text-red-500', description: 'Monitoring System' },
-    { name: 'Grafana', icon: SiGrafana, color: 'text-orange-500', description: 'Data Visualization' },
+  // Deployment and payments
+  { name: 'Vercel', icon: SiVercel, color: 'text-black', description: 'Deployment Platform' },
+  { name: 'GitHub Actions', icon: SiGithubactions, color: 'text-blue-500', description: 'CI/CD Automation' },
+  { name: 'Git', icon: FaGitAlt, color: 'text-orange-500', description: 'Version Control' },
+  { name: 'Cloudinary', icon: SiCloudinary, color: 'text-blue-500', description: 'Media Management' },
+  { name: 'Google Analytics', icon: SiGoogleanalytics, color: 'text-orange-500', description: 'Traffic and Behavior Analytics' },
+  { name: 'Google Ads', icon: SiGoogleads, color: 'text-blue-500', description: 'Paid Growth Campaigns' },
+  { name: 'AdMob', icon: SiGoogleads, color: 'text-green-500', description: 'In-App Ads Monetization' },
+  { name: 'Search Console', icon: SiGooglesearchconsole, color: 'text-emerald-600', description: 'Search Performance Monitoring' },
+  { name: 'App Stores', icon: FaStore, color: 'text-indigo-500', description: 'App Distribution and Optimization' },
+  { name: 'Play Store', icon: SiGoogleplay, color: 'text-cyan-500', description: 'Android Publishing' },
+  { name: 'Stripe', icon: SiStripe, color: 'text-indigo-500', description: 'Payment Processing' },
+  { name: 'PayPal', icon: SiPaypal, color: 'text-blue-600', description: 'Global Payments' },
 ]
 
 
 const categorizedTech = {
-    frontend: TechStack.filter(tech =>
-        ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind', 'Flutter', 'PWA', 'Framer Motion', 'Storybook'].includes(tech.name)
-    ),
-    backend: TechStack.filter(tech =>
-        ['Node.js', 'Python', 'Django', 'Laravel', 'Spring Boot', 'Java', 'PHP', 'Rust', 'Go', 'C++', 'C'].includes(tech.name)
-    ),
-    database: TechStack.filter(tech =>
-        ['MongoDB', 'PostgreSQL', 'Redis', 'Firebase', 'Supabase'].includes(tech.name)
-    ),
-    cloud: TechStack.filter(tech =>
-        ['AWS', 'Docker', 'Kubernetes', 'Vercel', 'Heroku', 'Netlify', 'Ansible', 'Terraform', 'Jenkins', 'GitHub Actions', 'GitLab', 'Git'].includes(tech.name)
-    ),
-    ai: TechStack.filter(tech =>
-        ['TensorFlow', 'PyTorch', 'NumPy', 'Pandas', 'Jupyter'].includes(tech.name)
-    ),
-    testing: TechStack.filter(tech =>
-        ['Jest', 'Mocha', 'Cypress'].includes(tech.name)
-    ),
-    monitoring: TechStack.filter(tech =>
-        ['Prometheus', 'Grafana'].includes(tech.name)
-    ),
-    web3: TechStack.filter(tech =>
-        ['GraphQL', 'Solidity', 'Ethereum'].includes(tech.name)
-    )
+  frontend: TechStack.filter((tech) =>
+    ['React', 'Next.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Framer Motion', 'PWA'].includes(tech.name)
+  ),
+  backend: TechStack.filter((tech) => ['Node.js', 'Express.js'].includes(tech.name)),
+  mobile: TechStack.filter((tech) => ['Mobile Applications', 'Ionic', 'React Native', 'Flutter', 'Kotlin', 'Java', 'App Stores', 'Play Store'].includes(tech.name)),
+  desktop: TechStack.filter((tech) => ['Electron.js'].includes(tech.name)),
+  database: TechStack.filter((tech) => ['MongoDB', 'Firebase'].includes(tech.name)),
+  cloud: TechStack.filter((tech) => ['Vercel', 'GitHub Actions', 'Git', 'Cloudinary', 'Google Analytics', 'Google Ads', 'Search Console', 'AdMob'].includes(tech.name)),
+  ai: TechStack.filter((tech) => ['OpenAI API'].includes(tech.name)),
+  integrations: TechStack.filter((tech) => ['Stripe', 'PayPal', 'Web Extensions'].includes(tech.name)),
 }
 
 export default TechStack

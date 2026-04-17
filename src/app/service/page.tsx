@@ -25,8 +25,8 @@ function ServicePage() {
         endTime.setHours(11, 0, 0, 0)
         
         scheduleCall({
-            title: 'Service Consultation - BharatAI Software',
-            description: 'Discuss which services are right for your project and get a custom solution.',
+            title: 'Service Discussion - Manprit Dev',
+            description: 'Discuss the right technical approach for your product and execution timeline.',
             startTime: tomorrow.toISOString(),
             endTime: endTime.toISOString()
         })
@@ -120,7 +120,7 @@ function ServicePage() {
                                 className="flex items-center justify-center mt-4 sm:mt-0 gap-2 text-blue-600 mb-4 sm:mb-6"
                             >
                                 <Star className="w-4 h-4 sm:w-5 sm:h-5" />
-                                <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">Our Services</span>
+                                <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">Services I Offer</span>
                                 <Star className="w-4 h-4 sm:w-5 sm:h-5" />
                             </motion.div>
 
@@ -139,9 +139,23 @@ function ServicePage() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                From mobile apps to AI solutions, we provide end-to-end digital services
-                                that transform your business and drive growth in the digital age.
+                                From web apps to AI-integrated workflows, I provide end-to-end development
+                                support that helps products launch faster and scale reliably.
                             </TextAnimate>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+                            >
+                                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm sm:text-base font-semibold text-blue-700">
+                                    Pricing starts at ₹35,000
+                                </span>
+                                <span className="inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm sm:text-base font-semibold text-cyan-700">
+                                    Monthly retainers from ₹12,000/month
+                                </span>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -168,6 +182,14 @@ function ServicePage() {
                                             <div>
                                                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black">{service.title}</h2>
                                                 <p className="text-cyan-500 text-sm sm:text-base">{service.shortDesc}</p>
+                                                <div className="mt-3 flex flex-wrap gap-2">
+                                                    <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs sm:text-sm font-semibold text-blue-700">
+                                                        {service.pricing}
+                                                    </span>
+                                                    <span className="inline-flex items-center rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs sm:text-sm font-semibold text-cyan-700">
+                                                        Timeline: {service.timeline}
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -201,14 +223,14 @@ function ServicePage() {
                                             </div>
                                         </div>
 
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 sm:p-6 bg-white/80 rounded-xl border border-blue-200">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
                                             <div>
                                                 <h4 className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Starting Price</h4>
-                                                <p className="text-base sm:text-lg font-bold text-blue-600">{service.pricing}</p>
+                                                <p className="text-lg sm:text-xl font-extrabold text-blue-700">{service.pricing}</p>
                                             </div>
                                             <div>
                                                 <h4 className="text-xs sm:text-sm font-medium text-gray-600 mb-1">Timeline</h4>
-                                                <p className="text-base sm:text-lg font-bold text-cyan-500">{service.timeline}</p>
+                                                <p className="text-lg sm:text-xl font-extrabold text-cyan-700">{service.timeline}</p>
                                             </div>
                                         </div>
 
@@ -259,11 +281,11 @@ function ServicePage() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                Ready to Transform Your Business?
+                                Ready to Build Your Product?
                             </TextAnimate>
 
                             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                                Let's discuss which services are right for your project and create a custom solution.
+                                Let's discuss which services match your project and define the right implementation path.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

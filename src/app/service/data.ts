@@ -1,4 +1,4 @@
-import { Smartphone, Globe, ShoppingCart, Blocks, Code, TrendingUp, Bot, Headphones } from "lucide-react"
+import { Smartphone, Globe, ShoppingCart, Code, TrendingUp, Bot, Headphones, Monitor, Puzzle } from "lucide-react"
 
 const services = [
     {
@@ -15,27 +15,27 @@ const services = [
             'Offline Functionality',
             'Third-party Integrations'
         ],
-        technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase'],
-        pricing: 'Starting from $15,000',
+        technologies: ['Mobile Applications', 'Kotlin', 'Java', 'React Native', 'Flutter', 'Firebase', 'AdMob', 'Google Ads', 'Google Analytics', 'App Stores', 'Play Store', 'Git'],
+        pricing: 'Starting from ₹1,20,000',
         timeline: '8-16 weeks',
         image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&w=600&q=80'
     },
     {
         id: 'website-development',
         icon: Globe,
-        title: 'Website Development',
-        shortDesc: 'Modern Web Solutions',
-        description: 'Build responsive, fast, and SEO-optimized websites that drive business growth and provide exceptional user experiences.',
+        title: 'Web Apps',
+        shortDesc: 'Modern Web Applications',
+        description: 'Build responsive, fast, and scalable web applications that support product growth and reliable user workflows.',
         features: [
-            'Responsive Web Design',
-            'Progressive Web Apps (PWA)',
-            'SEO Optimization',
+            'Responsive Product Interfaces',
+            'Secure API Integrations',
+            'SEO-Friendly Architecture',
             'Performance Optimization',
-            'Content Management Systems',
-            'API Integration'
+            'Authentication & Role Flows',
+            'Dashboard & Admin Modules'
         ],
-        technologies: ['React', 'Next.js', 'Vue.js', 'Node.js', 'TypeScript'],
-        pricing: 'Starting from $8,000',
+        technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Tailwind CSS'],
+        pricing: 'Starting from ₹35,000',
         timeline: '4-12 weeks',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&w=600&q=80'
     },
@@ -53,48 +53,86 @@ const services = [
             'Multi-vendor Support',
             'Analytics & Reporting'
         ],
-        technologies: ['Shopify', 'WooCommerce', 'Magento', 'Stripe', 'PayPal'],
-        pricing: 'Starting from $12,000',
+        technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'PayPal'],
+        pricing: 'Starting from ₹85,000',
         timeline: '6-14 weeks',
         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=600&q=80'
     },
     {
-        id: 'blockchain-development',
-        icon: Blocks,
-        title: 'Blockchain Development',
-        shortDesc: 'Decentralized Applications',
-        description: 'Build secure, transparent, and scalable blockchain solutions including DeFi platforms, NFT marketplaces, and smart contracts.',
-        features: [
-            'Smart Contract Development',
-            'DeFi Platform Creation',
-            'NFT Marketplace Development',
-            'Cryptocurrency Integration',
-            'Blockchain Consulting',
-            'Security Auditing'
-        ],
-        technologies: ['Solidity', 'Web3.js', 'Ethereum', 'Polygon', 'IPFS'],
-        pricing: 'Starting from $25,000',
-        timeline: '12-20 weeks',
-        image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&w=600&q=80'
-    },
-    {
         id: 'native-app-development',
-        icon: Smartphone,
-        title: 'Native App Development',
-        shortDesc: 'Cross-Platform Apps',
-        description: 'Build high-performance native applications that leverage platform-specific features for optimal user experience.',
+        icon: Monitor,
+        title: 'Desktop Apps',
+        shortDesc: 'Windows/macOS Desktop Solutions',
+        description: 'Build high-performance desktop applications with stable architecture and polished user experiences.',
         features: [
-            'iOS App Development (Swift)',
-            'Android App Development (Kotlin)',
-            'Cross-Platform Solutions',
-            'App Store Deployment',
+            'Cross-Platform Desktop Delivery',
+            'Electron-Based Development',
+            'Offline-First Capabilities',
+            'Auto-Update Friendly Setup',
             'Performance Optimization',
-            'Platform-Specific Features'
+            'Platform-Specific Integrations'
         ],
-        technologies: ['Swift', 'Kotlin', 'React Native', 'Flutter', 'Xamarin'],
-        pricing: 'Starting from $18,000',
+        technologies: ['Electron.js', 'React', 'TypeScript', 'Node.js', 'MongoDB'],
+        pricing: 'Starting from ₹80,000',
         timeline: '10-18 weeks',
         image: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?ixlib=rb-4.0.3&w=600&q=80'
+    },
+    {
+        id: 'ionic-apps',
+        icon: Smartphone,
+        title: 'Ionic Apps',
+        shortDesc: 'Hybrid iOS & Android Apps',
+        description: 'Create Ionic applications with production-ready architecture, smooth UX, and maintainable codebases.',
+        features: [
+            'Ionic + Angular/React Stack',
+            'Native Plugin Integrations',
+            'Cross-Platform Delivery',
+            'Store-Ready Build Pipeline',
+            'Performance Optimization',
+            'Push Notification Setup'
+        ],
+        technologies: ['Ionic', 'Mobile Applications', 'Kotlin', 'Java', 'React Native', 'Flutter', 'Firebase', 'AdMob', 'Google Ads', 'Google Analytics', 'App Stores', 'Play Store', 'Git'],
+        pricing: 'Starting from ₹90,000',
+        timeline: '8-14 weeks',
+        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&w=600&q=80'
+    },
+    {
+        id: 'pwa-apps',
+        icon: Globe,
+        title: 'PWA Apps',
+        shortDesc: 'Installable Web Applications',
+        description: 'Build progressive web apps that feel like native apps with offline support and installable experiences.',
+        features: [
+            'Installable Experience',
+            'Offline Caching Strategy',
+            'Background Sync Readiness',
+            'Performance Optimization',
+            'Push Notification Foundation',
+            'App-Like Navigation'
+        ],
+        technologies: ['Next.js', 'React', 'TypeScript', 'PWA', 'Firebase'],
+        pricing: 'Starting from ₹60,000',
+        timeline: '4-8 weeks',
+        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&w=600&q=80'
+    },
+    {
+        id: 'chrome-extensions',
+        icon: Puzzle,
+        title: 'Chrome Extensions',
+        shortDesc: 'Browser Productivity Extensions',
+        description: 'Develop Chrome extensions for workflow automation, product utility features, and user productivity improvements.',
+        features: [
+            'Manifest V3 Development',
+            'Browser API Integrations',
+            'Extension UI/UX Design',
+            'Secure Permission Handling',
+            'Store Listing Preparation',
+            'Post-Launch Improvements'
+        ],
+        technologies: ['Web Extensions', 'Chrome Extension', 'TypeScript', 'React', 'Firebase', 'Git', 'Google Analytics', 'Google Ads', 'Search Console'],
+        pricing: 'Starting from ₹35,000',
+        timeline: '3-6 weeks',
+        image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&w=600&q=80'
     },
     {
         id: 'custom-software',
@@ -110,8 +148,8 @@ const services = [
             'Legacy System Modernization',
             'Microservices Architecture'
         ],
-        technologies: ['Python', 'Java', '.NET', 'AWS', 'Docker'],
-        pricing: 'Starting from $20,000',
+        technologies: ['Node.js', 'Express.js', 'MongoDB', 'Vercel', 'GitHub Actions'],
+        pricing: 'Starting from ₹1,50,000',
         timeline: '10-24 weeks',
         image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&w=600&q=80'
     },
@@ -129,8 +167,8 @@ const services = [
             'Email Marketing Campaigns',
             'Analytics & Performance Tracking'
         ],
-        technologies: ['Google Analytics', 'Google Ads', 'Facebook Ads', 'SEMrush', 'Mailchimp'],
-        pricing: 'Starting from $3,000/month',
+        technologies: ['Google Analytics', 'Google Ads', 'Search Console', 'Firebase', 'Vercel', 'Cloudinary', 'OpenAI API', 'Git'],
+        pricing: 'Starting from ₹12,000/month',
         timeline: 'Ongoing',
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&w=600&q=80'
     },
@@ -148,8 +186,8 @@ const services = [
             'Predictive Analytics',
             'AI Integration Services'
         ],
-        technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face'],
-        pricing: 'Starting from $30,000',
+        technologies: ['OpenAI API', 'Node.js', 'Express.js', 'Firebase', 'MongoDB'],
+        pricing: 'Starting from ₹1,80,000',
         timeline: '14-26 weeks',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&w=600&q=80'
     },

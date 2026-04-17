@@ -72,7 +72,7 @@ function TechnologiesPage() {
                             className="flex items-center justify-center gap-2 sm:gap-3 text-blue-600 mb-4 sm:mb-6 md:mb-8"
                         >
                             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
-                            <span className="text-xs sm:text-sm font-bold tracking-wider uppercase">Our Technology Arsenal</span>
+                            <span className="text-xs sm:text-sm font-bold tracking-wider uppercase">Technology Arsenal</span>
                             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
                         </motion.div>
 
@@ -98,8 +98,8 @@ function TechnologiesPage() {
                             animation="slideUp"
                             by="word"
                         >
-                            We leverage the most advanced and reliable technologies to build scalable,
-                            secure, and high-performance solutions that drive your business forward.
+                            I use advanced and reliable technologies to build scalable,
+                            secure, and high-performance products.
                         </TextAnimate>
                     </div>
 

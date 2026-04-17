@@ -21,8 +21,8 @@ function Solutions() {
         endTime.setHours(11, 0, 0, 0)
 
         scheduleCall({
-            title: 'Consultation Call - BharatAI Software',
-            description: 'Discuss your project requirements and get a custom solution tailored to your business needs.',
+            title: 'Portfolio Discussion - Manprit Dev',
+            description: 'Discuss your project requirements and build an execution roadmap for your product.',
             startTime: tomorrow.toISOString(),
             endTime: endTime.toISOString()
         })
@@ -80,7 +80,7 @@ function Solutions() {
                         className="flex items-center justify-center gap-2 text-blue-600 mb-6"
                     >
                         <div className="w-8 h-px bg-blue-600"></div>
-                        <span className="text-sm font-medium tracking-wider uppercase">Our Solutions</span>
+                        <span className="text-sm font-medium tracking-wider uppercase">Solution Approach</span>
                         <div className="w-8 h-px bg-blue-600"></div>
                     </motion.div>
 
@@ -113,8 +113,8 @@ function Solutions() {
                         animation="slideUp"
                         by="word"
                     >
-                        From initial concept to final deployment and beyond, we provide comprehensive
-                        solutions that cover every aspect of your digital transformation journey.
+                        From initial concept to deployment and optimization, I provide practical
+                        solutions that cover the full product journey.
                     </TextAnimate>
                 </div>
 
@@ -184,7 +184,7 @@ function Solutions() {
                             </TextAnimate>
 
                             <p className="text-gray-600 text-base md:text-lg mb-8">
-                                Let's discuss how our solutions can help you achieve your goals and drive growth.
+                                Let's discuss how this approach can help you achieve your goals and drive growth.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -225,7 +225,7 @@ function Solutions() {
                                 </TextAnimate>
 
                                 <p className="text-gray-600 text-lg xl:text-xl mb-8 max-w-2xl">
-                                    Let's discuss how our solutions can help you achieve your goals and drive growth.
+                                    Let's discuss how this approach can help you achieve your goals and drive growth.
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">

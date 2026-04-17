@@ -24,15 +24,15 @@ const faqs = [
     },
     { 
         question: "What are your pricing options?",
-        answer: "Our pricing is tailored to your specific needs:\n\n• Startup Package: $5K - $15K\n• Business Package: $15K - $50K\n• Enterprise Package: $50K+\n\nWe offer:\n✓ Fixed-price projects\n✓ Hourly consulting ($75-150/hr)\n✓ Monthly retainers\n✓ Free initial consultation\n\nLet's discuss your project for an accurate quote!" 
+        answer: "Pricing is tailored to scope and timeline:\n\n• Starter Projects: ₹65,000 - ₹1,65,000\n• Growth Projects: ₹1,65,000 - ₹5,00,000\n• Advanced Products: ₹5,00,000+\n\nAvailable models:\n✓ Fixed-price projects\n✓ Hourly consulting (₹2,000-₹5,000/hr)\n✓ Monthly retainers\n✓ Free initial consultation\n\nLet's discuss your project for an accurate quote!" 
     },
     { 
         question: "Do you provide ongoing support?",
-        answer: "Yes! We provide comprehensive support:\n\n• 30 days free post-launch support\n• Monthly maintenance packages\n• 24/7 emergency support\n• Regular updates and security patches\n• Performance monitoring\n\nOur support packages start from $500/month." 
+        answer: "Yes! Comprehensive support is available:\n\n• 30 days free post-launch support\n• Monthly maintenance packages\n• Priority issue handling\n• Regular updates and security patches\n• Performance monitoring\n\nSupport packages start from ₹10,000/month." 
     },
     { 
         question: "What technologies do you use?",
-        answer: "We use cutting-edge technologies:\n\n**Frontend:**\n• React, Vue.js, Angular\n• Next.js, Nuxt.js\n• TypeScript, JavaScript\n\n**Backend:**\n• Node.js, Python, PHP\n• Express, Django, Laravel\n\n**Mobile:**\n• React Native, Flutter\n• iOS, Android native\n\n**Cloud & DevOps:**\n• AWS, Google Cloud, Azure\n• Docker, Kubernetes\n\nWe choose the best tech stack for your specific needs!" 
+        answer: "I use technologies from real shipped projects:\n\n**Frontend:**\n• React, Next.js\n• TypeScript, JavaScript\n• Tailwind CSS, Framer Motion\n\n**Backend & Data:**\n• Node.js, Express.js\n• MongoDB, Firebase\n\n**Mobile/Desktop:**\n• Ionic, React Native, Flutter\n• Electron.js\n\n**Deployment & Integrations:**\n• Vercel, GitHub Actions, Cloudinary\n• Stripe, PayPal, OpenAI API\n\nI choose from this stack based on your project needs." 
     }
 ]
 
@@ -51,7 +51,7 @@ export const useChat = () => {
     const [messages, setMessages] = useState<Message[]>([
         {
             id: 1,
-            text: "Hello! 👋 I'm Alex, your AI assistant at KABULE TECH. I'm here to help you find the perfect solution for your project!",
+            text: "Hello! 👋 I'm your portfolio assistant for Manprit Dev. I can help with projects, stack, and collaboration details.",
             sender: 'bot',
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             type: 'quickReplies'
@@ -88,7 +88,7 @@ export const useChat = () => {
             case 'services':
                 addMessage("I'd like to see your services", 'user')
                 simulateTyping(() => {
-                    addMessage("Here are our main services. Click on any service to learn more:", 'bot', 'services')
+                    addMessage("Here are the main services. Click any service to learn more:", 'bot', 'services')
                 })
                 break
             case 'pricing':
@@ -106,7 +106,7 @@ export const useChat = () => {
             case 'contact':
                 addMessage("How can I contact you?", 'user')
                 simulateTyping(() => {
-                    addMessage("Here's how you can reach us:\n\n📧 Email: hello@kabuletech.com\n📞 Phone: +1 (555) 123-4567\n🌐 Website: www.kabuletech.com\n📍 Address: 123 Tech Street, Digital City\n\n💬 Business Hours:\nMon-Fri 9AM-6PM EST\n\nWe typically respond within 2-4 hours during business hours. Feel free to reach out anytime!", 'bot', 'quickReplies')
+                    addMessage("Here's how you can reach me:\n\n📧 Email: mnprt312@gmail.com\n📞 Phone: +91 82648 74761\n🌐 Website: manprit.dev\n📍 Location: Mohali, Punjab, India\n\n💬 Availability:\nMon-Sat (IST)", 'bot', 'quickReplies')
                 })
                 break
         }
@@ -117,7 +117,7 @@ export const useChat = () => {
         addMessage(`I'm interested in ${service}`, 'user')
         
         simulateTyping(() => {
-            addMessage(`Excellent choice! ${service} is one of our specialties. We've helped 100+ clients with similar projects. Let me collect some details to provide you with a personalized quote.`, 'bot')
+            addMessage(`Excellent choice! ${service} aligns well with my portfolio work. Let me collect a few details and share a suitable approach.`, 'bot')
             setTimeout(() => {
                 addMessage('Please fill out this quick form (takes less than 2 minutes):', 'bot', 'form')
                 setCurrentStep('form')
@@ -134,10 +134,10 @@ export const useChat = () => {
         try {
             await new Promise(resolve => setTimeout(resolve, 1000))
             
-            addMessage('🎉 Perfect! Your information has been submitted successfully. Our expert team will contact you within 2-4 hours with a detailed proposal and next steps.', 'bot')
+            addMessage('🎉 Perfect! Your information has been submitted successfully. I will follow up shortly with next steps.', 'bot')
             setCurrentStep('completed')
         } catch (error) {
-            addMessage('Sorry, there was a connection error. Please try again or contact us directly at hello@kabuletech.com', 'bot')
+            addMessage('Sorry, there was a connection error. Please try again or contact me directly at mnprt312@gmail.com', 'bot')
         }
     }
 
@@ -149,7 +149,7 @@ export const useChat = () => {
 
             simulateTyping(() => {
                 if (message.includes('service') || message.includes('what do you do') || message.includes('offer')) {
-                    addMessage('Here are our main services. We specialize in creating innovative digital solutions:', 'bot', 'services')
+                    addMessage('Here are the main services offered for product development:', 'bot', 'services')
                 } else if (message.includes('price') || message.includes('cost') || message.includes('budget')) {
                     addMessage(faqs[1].answer, 'bot', 'quickReplies')
                 } else if (message.includes('time') || message.includes('long') || message.includes('duration')) {
@@ -159,17 +159,17 @@ export const useChat = () => {
                 } else if (message.includes('technology') || message.includes('tech') || message.includes('stack')) {
                     addMessage(faqs[3].answer, 'bot', 'quickReplies')
                 } else if (message.includes('contact') || message.includes('call') || message.includes('email')) {
-                    addMessage("Here's how you can reach us:\n\n📧 Email: hello@kabuletech.com\n📞 Phone: +1 (555) 123-4567\n🌐 Website: www.kabuletech.com\n📍 Address: 123 Tech Street, Digital City\n\n💬 Business Hours:\nMon-Fri 9AM-6PM EST\n\nWe typically respond within 2-4 hours during business hours. Feel free to reach out anytime!", 'bot', 'quickReplies')
+                    addMessage("Here's how you can reach me:\n\n📧 Email: mnprt312@gmail.com\n📞 Phone: +91 82648 74761\n🌐 Website: manprit.dev\n📍 Location: Mohali, Punjab, India\n\n💬 Availability:\nMon-Sat (IST)", 'bot', 'quickReplies')
                 } else if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
                     addMessage("Hello! Great to meet you! 👋 I'm here to help you find the perfect solution for your project. What can I help you with today?", 'bot', 'quickReplies')
                 } else if (message.includes('about') || message.includes('company') || message.includes('who are you')) {
-                    addMessage("KABULE TECH is a leading software development company specializing in:\n\n🚀 Custom Web & Mobile Applications\n💼 Enterprise Solutions\n🎨 UI/UX Design\n☁️ Cloud Services\n🔐 Cybersecurity\n\nWe've helped 100+ businesses transform their ideas into successful digital products. What project can we help you with?", 'bot', 'services')
+                    addMessage("Manprit Dev is a SaaS-focused full-stack portfolio specializing in web apps, Chrome extensions, and product engineering. What project can I help with?", 'bot', 'services')
                 } else if (message.includes('portfolio') || message.includes('work') || message.includes('project') || message.includes('example')) {
-                    addMessage("We've successfully delivered projects across various industries:\n\n📱 Mobile Apps: E-commerce, Healthcare, Education\n🌐 Web Applications: SaaS platforms, Dashboards\n🏢 Enterprise: CRM, ERP, Custom Solutions\n🎮 Games: Mobile & Web-based\n\nEach project is tailored to client needs with modern tech stack. Would you like to discuss your specific requirements?", 'bot', 'services')
+                    addMessage("Successful deliveries span multiple categories:\n\n📱 Mobile Apps: e-commerce, healthcare, education\n🌐 Web Applications: SaaS platforms and dashboards\n🏢 Business Tools: CRM and custom systems\n🎮 Interactive Products: web-based experiences\n\nWould you like to discuss your specific requirements?", 'bot', 'services')
                 } else if (message.includes('team') || message.includes('developer') || message.includes('experience')) {
-                    addMessage("Our expert team includes:\n\n👨💻 Senior Developers (5+ years exp)\n🎨 UI/UX Designers\n🔧 DevOps Engineers\n📊 Project Managers\n🔍 QA Specialists\n\nWe follow agile methodology and maintain 98% client satisfaction rate. Ready to start your project?", 'bot', 'services')
+                    addMessage("I work as a full-stack developer with product ownership across planning, implementation, and delivery. Ready to start your project?", 'bot', 'services')
                 } else {
-                    addMessage("Thanks for your message! I'd love to help you with that. Would you like to explore our services or do you have a specific question?", 'bot', 'quickReplies')
+                    addMessage("Thanks for your message! I'd love to help. Would you like to explore service areas or ask a specific question?", 'bot', 'quickReplies')
                 }
             })
         }

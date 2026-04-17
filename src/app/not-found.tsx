@@ -76,7 +76,7 @@ export default function NotFound() {
               Need Help?
             </h3>
             <p className="text-slate-600 mb-6">
-              Can't find what you're looking for? Our team is here to help you navigate our services.
+              Can't find what you're looking for? I can help you navigate the portfolio quickly.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -92,7 +92,7 @@ export default function NotFound() {
                 className="flex items-center gap-2 bg-cyan-100 hover:bg-cyan-200 text-slate-800 px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                Contact Us
+                Contact Me
               </button>
             </div>
           </motion.div>

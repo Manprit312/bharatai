@@ -8,9 +8,11 @@ import { RoughNotation } from "react-rough-notation"
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { useContactPopup } from "@/components/ContactPopup"
 import services from '@/consts/services'
+import { useRouter } from 'next/navigation'
 
 function Services() {
     const { openPopup, ContactPopup } = useContactPopup()
+    const router = useRouter()
     
     const ServiceCard = ({ service, index }: { service: any, index: number }) => (
         <motion.div
@@ -59,7 +61,10 @@ function Services() {
 
                 {/* CTA Button */}
                 <div className="mt-auto">
-                    <InteractiveHoverButton className="w-full bg-yellow-50 border border-yellow-300 hover:border-blue-600 text-black hover:text-blue-700 py-2.5 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm hover:bg-blue-50">
+                    <InteractiveHoverButton
+                        onClick={() => router.push('/service')}
+                        className="w-full bg-yellow-50 border border-yellow-300 hover:border-blue-600 text-black hover:text-blue-700 py-2.5 sm:py-3 rounded-xl font-medium transition-all duration-300 text-sm hover:bg-blue-50"
+                    >
                         Learn More
                     </InteractiveHoverButton>
                 </div>
@@ -83,7 +88,7 @@ function Services() {
                         className="flex items-center justify-center gap-2 text-blue-600 mb-3 sm:mb-4 md:mb-6"
                     >
                         <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-                        <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">Our Services</span>
+                        <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">What I Build</span>
                         <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
                     </motion.div>
 
@@ -108,7 +113,7 @@ function Services() {
                             animation="slideUp"
                             by="word"
                         >
-                            for Your Business
+                            for Your Product
                         </TextAnimate>
                     </div>
 
@@ -117,8 +122,8 @@ function Services() {
                         animation="slideUp"
                         by="word"
                     >
-                        From concept to deployment, we provide end-to-end digital solutions
-                        that transform your ideas into powerful, scalable applications.
+                        From concept to deployment, I deliver end-to-end implementation
+                        that turns ideas into reliable, scalable applications.
                     </TextAnimate>
                 </div>
 

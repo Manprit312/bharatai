@@ -25,10 +25,10 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
 
     const slides = [
         {
-            title: "Welcome to BharatAI Software! 🚀",
-            subtitle: "Transform Your Ideas Into Reality",
-            description: "We're a premium software development company specializing in cutting-edge digital solutions.",
-            image: "/image/hero.png",
+            title: "Welcome to Manprit Dev! 🚀",
+            subtitle: "SaaS-Focused Full-Stack Portfolio",
+            description: "Explore real product work across web apps, desktop tools, and extensions.",
+            image: "/image/manprit-profile.png",
             stats: [
                 { icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" />, label: "Happy Clients", value: "100+" },
                 { icon: <Trophy className="w-4 h-4 sm:w-5 sm:h-5" />, label: "Projects", value: "500+" },
@@ -36,15 +36,14 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
             ]
         },
         {
-            title: "Our Expertise 💡",
+            title: "Core Expertise 💡",
             subtitle: "Full-Stack Development Solutions",
-            description: "From mobile apps to enterprise software, we deliver exceptional digital experiences.",
+            description: "From web apps to extensions, I deliver practical and production-ready digital products.",
             image: "/image/computer.jpg",
             features: [
                 "🔥 Mobile App Development",
                 "⚡ Web Development",
                 "🛒 E-commerce Solutions",
-                "🔐 Blockchain Development",
                 "🤖 AI Solutions",
                 "☁️ Cloud Services"
             ]
@@ -52,7 +51,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) =
         {
             title: "Ready to Start? 🎯",
             subtitle: "Let's Build Something Amazing Together",
-            description: "Join hundreds of satisfied clients who trusted us with their digital transformation.",
+            description: "If you are building something meaningful, let us discuss how I can help.",
             image: "/image/team_1.jpg",
             cta: true
         }

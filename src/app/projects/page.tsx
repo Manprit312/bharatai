@@ -32,10 +32,10 @@ function ProjectsPage() {
 
     const categories = [
         { id: 'all', name: 'All Projects', icon: Layers },
-        { id: 'web', name: 'Web Apps', icon: Code },
-        { id: 'mobile', name: 'Mobile Apps', icon: Server },
-        { id: 'ecommerce', name: 'E-commerce', icon: TrendingUp },
-        { id: 'blockchain', name: 'Blockchain', icon: Award }
+        { id: 'web', name: 'Websites', icon: Code },
+        { id: 'desktop', name: 'Desktop App', icon: Server },
+        { id: 'extension', name: 'Chrome Extensions', icon: TrendingUp },
+        { id: 'app', name: 'Ionic Apps', icon: Calendar }
     ]
 
     const filteredProjects = activeFilter === 'all' 
@@ -45,9 +45,9 @@ function ProjectsPage() {
     const getCategoryColor = (category: string) => {
         const colors = {
             'web': 'bg-blue-100 text-blue-600',
-            'mobile': 'bg-cyan-100 text-cyan-600',
-            'ecommerce': 'bg-yellow-100 text-yellow-600',
-            'blockchain': 'bg-purple-100 text-purple-600'
+            'desktop': 'bg-cyan-100 text-cyan-600',
+            'extension': 'bg-yellow-100 text-yellow-600',
+            'app': 'bg-purple-100 text-purple-600'
         }
         return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-600'
     }
@@ -60,7 +60,7 @@ function ProjectsPage() {
 
         await scheduleCall({
             title: 'Project Discussion Call',
-            description: 'Let\'s discuss your project requirements and how we can help you achieve your goals.',
+            description: 'Let\'s discuss your project requirements and map the best implementation approach.',
             startTime: callTime.toISOString(),
             endTime: endTime.toISOString(),
         })
@@ -100,7 +100,7 @@ function ProjectsPage() {
                                 animate={{ letterSpacing: "0.2em" }}
                                 transition={{ duration: 0.5, delay: 0.4 }}
                             >
-                                Our Work
+                                My Work
                             </motion.span>
                             <motion.div
                                 animate={{ rotate: [0, -360] }}
@@ -140,7 +140,7 @@ function ProjectsPage() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                Explore our portfolio of successful projects across web, mobile, and enterprise solutions
+                                Explore my live projects across websites, desktop apps, Chrome extensions, and Ionic apps
                             </TextAnimate>
                         </motion.div>
                     </div>
@@ -452,20 +452,34 @@ function ProjectsPage() {
                                         {/* Action Buttons - Fixed Alignment */}
                                         <div className="flex gap-2">
                                             {project.liveUrl && (
-                                                <InteractiveHoverButton className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200">
-                                                    <div className="flex items-center justify-center gap-1.5">
-                                                        <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" />
-                                                        <span>Demo</span>
-                                                    </div>
-                                                </InteractiveHoverButton>
+                                                <a
+                                                    href={project.liveUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex-1"
+                                                >
+                                                    <InteractiveHoverButton className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200">
+                                                        <div className="flex items-center justify-center gap-1.5">
+                                                            <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" />
+                                                            <span>Live</span>
+                                                        </div>
+                                                    </InteractiveHoverButton>
+                                                </a>
                                             )}
                                             {project.githubUrl && (
-                                                <InteractiveHoverButton className="flex-1 border border-gray-300 hover:border-blue-600 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200">
-                                                    <div className="flex items-center justify-center gap-1.5">
-                                                        <Github className="w-3.5 h-3.5 flex-shrink-0" />
-                                                        <span>Code</span>
-                                                    </div>
-                                                </InteractiveHoverButton>
+                                                <a
+                                                    href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex-1"
+                                                >
+                                                    <InteractiveHoverButton className="w-full border border-gray-300 hover:border-blue-600 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200">
+                                                        <div className="flex items-center justify-center gap-1.5">
+                                                            <Github className="w-3.5 h-3.5 flex-shrink-0" />
+                                                            <span>Code</span>
+                                                        </div>
+                                                    </InteractiveHoverButton>
+                                                </a>
                                             )}
                                         </div>
                                     </div>

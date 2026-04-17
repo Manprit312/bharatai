@@ -1,36 +1,36 @@
 const testimonials = [
     {
         name: "Sarah Johnson",
-        role: "CEO, TechStart Inc.",
-        content: "BharatAI Software transformed our vision into reality. Their expertise in modern technologies and attention to detail is unmatched.",
+        role: "Product Manager, SaaS Team",
+        content: "Manprit consistently ships clean, production-ready features and balances speed with maintainability. Her ownership and communication stand out.",
         rating: 5,
         avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&w=150&q=80"
     },
     {
         name: "Michael Chen",
-        role: "CTO, InnovateLab",
-        content: "Working with Milado was a game-changer. They delivered a scalable solution that exceeded our expectations and timeline.",
+        role: "Engineering Lead",
+        content: "She handled full-stack delivery end to end, from UI polish to API integration and deployment workflows. We saw smoother releases immediately.",
         rating: 5,
         avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&w=150&q=80"
     },
     {
         name: "Emily Rodriguez",
-        role: "Founder, EcoSolutions",
-        content: "The team's professionalism and technical expertise helped us launch our platform successfully. Highly recommended!",
+        role: "Startup Founder",
+        content: "Manprit helped us shape the MVP scope clearly and execute quickly. Her practical product thinking made a real difference for early traction.",
         rating: 5,
         avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&w=150&q=80"
     },
     {
         name: "David Thompson",
-        role: "VP Engineering, DataFlow",
-        content: "Exceptional quality and support. BharatAI Software delivered exactly what we needed, on time and within budget.",
+        role: "Senior Developer",
+        content: "Her React and Next.js work is dependable and performance-focused. The code quality made collaboration and iteration easier for the whole team.",
         rating: 5,
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=150&q=80"
     },
     {
         name: "Lisa Wang",
-        role: "Product Manager, CloudTech",
-        content: "Their innovative approach and cutting-edge solutions helped us stay ahead of the competition. Outstanding work!",
+        role: "Operations Manager",
+        content: "From feature implementation to deployment, Manprit delivered with consistency and clarity. We trusted her with critical product timelines.",
         rating: 5,
         avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&w=150&q=80"
     }

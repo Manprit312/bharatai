@@ -13,17 +13,17 @@ function Transform() {
         {
             icon: Target,
             title: "Strategic Planning",
-            description: "We analyze your business goals and create tailored digital strategies."
+            description: "I analyze product goals and create tailored technical strategies."
         },
         {
             icon: Zap,
             title: "Rapid Development",
-            description: "Fast-track your project with our agile development methodology."
+            description: "Fast-track your project with iterative, product-focused execution."
         },
         {
             icon: Users,
-            title: "Expert Team",
-            description: "Work with seasoned professionals who deliver exceptional results."
+            title: "Hands-On Ownership",
+            description: "Work directly with a developer focused on quality and delivery."
         }
     ]
 
@@ -47,7 +47,7 @@ function Transform() {
                                 className="flex items-center gap-2 text-blue-600"
                             >
                                 <div className="w-6 md:w-8 h-px bg-blue-600"></div>
-                                <span className="text-xs md:text-sm font-medium tracking-wider uppercase">Why Choose Us</span>
+                                <span className="text-xs md:text-sm font-medium tracking-wider uppercase">Why Work With Me</span>
                             </motion.div>
 
                             <TextAnimate
@@ -63,8 +63,8 @@ function Transform() {
                                 animation="slideUp"
                                 by="word"
                             >
-                                We don't just build software – we craft digital experiences that 
-                                drive growth, enhance efficiency, and position your business for 
+                                I do not just build software - I craft digital experiences that
+                                drive growth, improve efficiency, and position your product for
                                 long-term success in the digital landscape.
                             </TextAnimate>
                         </div>
